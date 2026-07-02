@@ -5,15 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte - Futuro Sustentável</title>
     <style>
-        /* Estilos básicos para deixar o layout apresentável */
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; color: #333; }
-        header { background: #2e7d32; color: #fff; padding: 2rem; text-align: center; }
-        section { padding: 2rem; max-width: 900px; margin: auto; }
-        .hero { background: #f4f4f4; text-align: center; padding: 3rem; }
-        h2 { color: #2e7d32; border-bottom: 2px solid #2e7d32; display: inline-block; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-        input, textarea, button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            color: #333;
+            background-color: #e8f5e9; /* Fundo verde claro */
+        }
+        header { 
+            background: #2e7d32; 
+            color: #fff; 
+            padding: 2rem; 
+            text-align: center; 
+        }
+        section { 
+            padding: 2rem; 
+            max-width: 900px; 
+            margin: auto; 
+        }
+        .hero { 
+            background: #c8e6c9; 
+            text-align: center; 
+            padding: 3rem; 
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        h2 { 
+            color: #2e7d32; 
+            border-bottom: 2px solid #2e7d32; 
+            display: inline-block; 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+        }
+        .grid-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        footer { 
+            background: #1b5e20; 
+            color: white; 
+            text-align: center; 
+            padding: 1rem; 
+            margin-top: 2rem; 
+        }
+        input, textarea, button { 
+            display: block; 
+            width: 100%; 
+            margin: 10px 0; 
+            padding: 10px; 
+        }
+        button {
+            background: #2e7d32;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1b5e20;
+        }
     </style>
 </head>
 <body>
@@ -26,10 +93,7 @@
     <section class="hero">
         <h2>Bem-vindo à Agricultura Moderna</h2>
         <p>Descubra como a agricultura moderna pode crescer economicamente sem prejudicar os recursos naturais das futuras gerações.</p>
-        <!-- Aqui você pode inserir a sua imagem de impacto visual -->
-        <div style="background: #ccc; height: 300px; display: flex; align-items: center; justify-content: center;">
-            [Imagem: Drones sobrevoando lavouras]
-        </div>
+        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900" alt="Drones sobrevoando lavouras">
     </section>
 
     <section id="producao">
@@ -44,9 +108,21 @@
     <section id="sustentabilidade">
         <h2>Práticas Sustentáveis no Campo</h2>
         <div class="grid">
-            <div><h3>Solo</h3><p>Plantio direto e rotação de culturas.</p></div>
-            <div><h3>Água</h3><p>Irrigação inteligente e economia de recursos.</p></div>
-            <div><h3>Energia</h3><p>Uso de painéis solares e bioenergia.</p></div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400" alt="Plantio direto no solo">
+                <h3>Solo</h3>
+                <p>Plantio direto e rotação de culturas.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400" alt="Irrigação inteligente">
+                <h3>Água</h3>
+                <p>Irrigação inteligente e economia de recursos.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400" alt="Painéis solares na agricultura">
+                <h3>Energia</h3>
+                <p>Uso de painéis solares e bioenergia.</p>
+            </div>
         </div>
     </section>
 
