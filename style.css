@@ -1,39 +1,182 @@
-/* Reset básico para evitar margens indesejadas */
+/* Reset e configurações gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
     color: #333;
-    background-color: #f4f7f6;
-    padding: 20px;
+    background-color: #e8f5e9; /* Fundo verde claro */
 }
 
-/* Layout responsivo simples para mobile */
-header {
-    background-color: #2e7d32; /* Verde Agrinho */
-    color: white;
-    padding: 1rem;
+/* Header */
+header { 
+    background: #2e7d32; 
+    color: #fff; 
+    padding: 2rem; 
     text-align: center;
-    border-radius: 8px;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Seções */
+section { 
+    padding: 2rem; 
+    max-width: 900px; 
+    margin: auto; 
+}
+
+/* Hero Section */
+.hero { 
+    background: #c8e6c9; 
+    text-align: center; 
+    padding: 3rem; 
+    border-radius: 10px;
+    margin: 2rem auto;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.02);
+}
+
+/* Títulos */
+h2 { 
+    color: #2e7d32; 
+    border-bottom: 2px solid #2e7d32; 
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Listas */
+ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* Grid */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    margin-top: 1.5rem;
+}
+
+.grid-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.grid-item h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+/* Formulário */
+#contato input, 
+#contato textarea, 
+#contato button { 
+    display: block; 
+    width: 100%; 
+    margin: 10px 0; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contato button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#contato button:hover {
+    background: #1b5e20;
+}
+
+#contato button:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
+footer { 
+    background: #1b5e20; 
+    color: white; 
+    text-align: center; 
+    padding: 1.5rem; 
+    margin-top: 2rem; 
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem;
     }
+    
+    section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
 }
