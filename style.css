@@ -9,23 +9,23 @@
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Kanit', sans-serif !important;
     line-height: 1.7;
-    color: #f1f1f1;
-    background-color: #0b071e; /* Fundo Dark Espacial */
+    color: #f1f1f1 !important;
+    background-color: #0b071e !important; /* Fundo Dark Espacial */
     overflow-x: hidden;
 }
 
 /* Barra de Navegação Fixa Moderna */
 .navbar {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
-    background: rgba(11, 7, 30, 0.85);
+    background: rgba(11, 7, 30, 0.85) !important;
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(138, 43, 226, 0.15);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.15) !important;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -42,10 +42,10 @@ body {
 }
 
 .logo {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', cursive !important;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     background: linear-gradient(90deg, #4dadff, #8a2be2);
     -webkit-background-clip: text;
@@ -53,8 +53,8 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Comfortaa', cursive;
-    color: #b3b3cc;
+    font-family: 'Comfortaa', cursive !important;
+    color: #b3b3cc !important;
     text-decoration: none;
     margin-left: 1.5rem;
     font-size: 0.95rem;
@@ -63,22 +63,22 @@ body {
 }
 
 .nav-links a:hover {
-    color: #4dadff;
+    color: #4dadff !important;
 }
 
 /* Header Moderno com Gradiente */
 header {
-    margin-top: 70px; /* Compensação da barra fixa */
-    background: linear-gradient(135deg, #1e0b36 0%, #0b071e 100%);
-    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    margin-top: 70px !important; /* Compensação da barra fixa */
+    background: linear-gradient(135deg, #1e0b36 0%, #0b071e 100%) !important;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2) !important;
     padding: 3.5rem 2rem;
     text-align: center;
     position: relative;
 }
 
 header h1 {
-    font-family: 'Caveat', cursive; /* Estilo Lettering Escrito à Mão */
-    font-size: 4.5rem; /* Maior para destacar o lettering */
+    font-family: 'Caveat', cursive !important; /* Estilo Lettering Escrito à Mão */
+    font-size: 4.5rem !important; /* Maior para destacar o lettering */
     font-weight: 700;
     background: linear-gradient(90deg, #4dadff, #8a2be2);
     -webkit-background-clip: text;
@@ -88,7 +88,7 @@ header h1 {
 }
 
 header p {
-    color: #b3b3cc;
+    color: #b3b3cc !important;
     font-size: 1.2rem;
     max-width: 600px;
     margin: auto;
@@ -97,21 +97,21 @@ header p {
 
 /* Estrutura das Seções */
 section {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem !important;
     max-width: 1000px;
-    margin: 2rem auto;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
+    margin: 2rem auto !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 16px !important;
     backdrop-filter: blur(10px);
 }
 
 /* Títulos das Seções */
 h2 {
-    font-family: 'Comfortaa', cursive; /* Lettering arredondado moderno */
-    font-size: 2.2rem;
+    font-family: 'Comfortaa', cursive !important; /* Lettering arredondado moderno */
+    font-size: 2.2rem !important;
     font-weight: 700;
-    color: #4dadff;
+    color: #4dadff !important;
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
@@ -129,8 +129,8 @@ h2::after {
 
 /* Hero Section */
 .hero {
-    background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.15), transparent);
-    border: 1px solid rgba(138, 43, 226, 0.2);
+    background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.15), transparent) !important;
+    border: 1px solid rgba(138, 43, 226, 0.2) !important;
     text-align: center;
 }
 
@@ -169,24 +169,24 @@ li::before {
 
 /* Grid com Efeito de Vidro (Glassmorphism) */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
     gap: 25px;
     margin-top: 2rem;
 }
 
 .grid-item {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03) !important;
+    padding: 25px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     transition: all 0.3s ease;
 }
 
 .grid-item:hover {
     transform: translateY(-8px);
-    background: rgba(138, 43, 226, 0.05);
-    border-color: rgba(138, 43, 226, 0.4);
+    background: rgba(138, 43, 226, 0.05) !important;
+    border-color: rgba(138, 43, 226, 0.4) !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -199,45 +199,45 @@ li::before {
 }
 
 .grid-item h3 {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', cursive !important;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #ffffff !important;
     margin-bottom: 0.8rem;
 }
 
 .grid-item p {
-    color: #b3b3cc;
+    color: #b3b3cc !important;
     font-size: 0.95rem;
     font-weight: 300;
 }
 
 /* Formulário Avançado */
 #contato input, #contato textarea {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Kanit', sans-serif !important;
     display: block;
     width: 100%;
     margin: 15px 0;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 8px;
     font-size: 16px;
-    color: #fff;
+    color: #fff !important;
     transition: all 0.3s ease;
 }
 
 #contato input:focus, #contato textarea:focus {
     outline: none;
-    border-color: #4dadff;
-    background: rgba(255, 255, 255, 0.08);
+    border-color: #4dadff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 0 10px rgba(77, 173, 255, 0.2);
 }
 
 #contato button {
-    font-family: 'Comfortaa', cursive;
-    background: linear-gradient(90deg, #8a2be2, #4dadff);
-    color: white;
+    font-family: 'Comfortaa', cursive !important;
+    background: linear-gradient(90deg, #8a2be2, #4dadff) !important;
+    color: white !important;
     border: none;
     width: 100%;
     padding: 16px;
@@ -261,9 +261,9 @@ li::before {
 
 /* Rodapé */
 footer {
-    background: #060411;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #666680;
+    background: #060411 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #666680 !important;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
@@ -273,9 +273,9 @@ footer {
 
 /* Responsividade Básica */
 @media (max-width: 768px) {
-    header h1 { font-size: 3.2rem; }
-    section { padding: 2.5rem 1.5rem; margin: 1rem; }
-    .grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 3.2rem !important; }
+    section { padding: 2.5rem 1.5rem !important; margin: 1rem !important; }
+    .grid { grid-template-columns: 1fr !important; }
 }
 
 /* Controle Inicial do JavaScript */
@@ -283,3 +283,4 @@ section {
     opacity: 0;
     transform: translateY(20px);
 }
+
