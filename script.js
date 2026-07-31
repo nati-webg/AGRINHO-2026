@@ -23,58 +23,70 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulação de envio
-            alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso. Entraremos em contato pelo e-mail ${email}.`);
+            // Simulação de envio bem-sucedido
+            alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.\nEntraremos em contato pelo e-mail: ${email}.`);
             
-            // Limpar formulário
+            // Limpar formulário de forma segura
             formContato.reset();
         });
     }
     
-    // Função para validar e-mail
+    // Função auxiliar com Regex para validar e-mail
     function validarEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
     
-    // Efeito de scroll suave nos links
+    // Efeito de scroll suave premium nos links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            const hrefAttr = this.getAttribute('href');
+            
+            // Se for apenas "#", ignora o prevent Default para não quebrar comportamento padrão
+            if (hrefAttr === '#') return;
+            
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(hrefAttr);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                // Compensação da altura da barra de navegação fixa (80px)
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - 80;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
     
-    // Animação ao rolar a página
+    // Configurações do Observador de Rolagem (IntersectionObserver)
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -40px 0px'
     };
     
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Ativa a animação injetando os estilos diretamente de forma suave
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                // Para de observar o elemento após a animação acontecer uma vez
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    // Observar todas as seções
+    // Inicializar e observar todas as seções do site
     document.querySelectorAll('section').forEach(section => {
         section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
         observer.observe(section);
     });
     
-    // Efeito de digitação no header (opcional)
+    // Efeito de digitação (Typewriter) premium no título principal
     const titulo = document.querySelector('header h1');
     if (titulo) {
         const textoOriginal = titulo.textContent;
@@ -85,14 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (i < textoOriginal.length) {
                 titulo.textContent += textoOriginal.charAt(i);
                 i++;
-                setTimeout(digitarTexto, 100);
+                setTimeout(digitarTexto, 70);
             }
         }
         
-        // Iniciar animação após 1 segundo
-        setTimeout(digitarTexto, 1000);
+        // Dispara o efeito após um leve delay de carregamento (600ms)
+        setTimeout(digitarTexto, 600);
     }
     
-    // Mensagem no console
-    console.log('🌱 Agro Forte - Futuro Sustentável carregado com sucesso!');
+    console.log('🌌 Agro Forte - Interface Neon Futurista carregada com sucesso!');
 });
