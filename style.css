@@ -1,4 +1,4 @@
-/* Importação das fontes elegantes: Outfit (Títulos) e Kanit (Textos) */
+/* Importação das fontes estilo Lettering e leitura: Comfortaa/Caveat e Kanit */
 @import url('https://googleapis.com');
 
 /* Configurações Gerais e Reset */
@@ -42,9 +42,9 @@ body {
 }
 
 .logo {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-size: 1.4rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #fff;
     text-decoration: none;
     background: linear-gradient(90deg, #4dadff, #8a2be2);
@@ -53,12 +53,12 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Comfortaa', cursive;
     color: #b3b3cc;
     text-decoration: none;
     margin-left: 1.5rem;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -77,19 +77,19 @@ header {
 }
 
 header h1 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
+    font-family: 'Caveat', cursive; /* Estilo Lettering Escrito à Mão */
+    font-size: 4.5rem; /* Maior para destacar o lettering */
+    font-weight: 700;
     background: linear-gradient(90deg, #4dadff, #8a2be2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0.8rem;
-    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 
 header p {
     color: #b3b3cc;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 600px;
     margin: auto;
     font-weight: 300;
@@ -108,7 +108,7 @@ section {
 
 /* Títulos das Seções */
 h2 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Comfortaa', cursive; /* Lettering arredondado moderno */
     font-size: 2.2rem;
     font-weight: 700;
     color: #4dadff;
@@ -199,7 +199,7 @@ li::before {
 }
 
 .grid-item h3 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-size: 1.4rem;
     font-weight: 700;
     color: #ffffff;
@@ -235,7 +235,7 @@ li::before {
 }
 
 #contato button {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Comfortaa', cursive;
     background: linear-gradient(90deg, #8a2be2, #4dadff);
     color: white;
     border: none;
@@ -273,12 +273,12 @@ footer {
 
 /* Responsividade Básica */
 @media (max-width: 768px) {
-    header h1 { font-size: 2.3rem; }
+    header h1 { font-size: 3.2rem; }
     section { padding: 2.5rem 1.5rem; margin: 1rem; }
     .grid { grid-template-columns: 1fr; }
 }
 
-/* Controle Inicial do JavaScript (Deixe esta regra no final) */
+/* Controle Inicial do JavaScript */
 section {
     opacity: 0;
     transform: translateY(20px);
