@@ -1,4 +1,3 @@
-/* Importação das fontes corrigida */
 @import url('https://googleapis.com');
 
 * {
@@ -15,13 +14,26 @@ body {
     overflow-x: hidden;
 }
 
+/* Forçamos a visibilidade total das seções para que nenhuma animação antiga trave o site invisível */
+section {
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 4rem 2rem !important;
+    max-width: 1000px;
+    margin: 2rem auto !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px);
+}
+
 .navbar {
     position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
-    background: rgba(11, 7, 30, 0.85) !important;
+    background: rgba(11, 7, 30, 0.95) !important;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(138, 43, 226, 0.15) !important;
     z-index: 1000;
@@ -70,7 +82,6 @@ header {
     border-bottom: 1px solid rgba(138, 43, 226, 0.2) !important;
     padding: 3.5rem 2rem;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
@@ -81,7 +92,6 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
-    letter-spacing: 1px;
 }
 
 header p {
@@ -89,17 +99,6 @@ header p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: auto;
-    font-weight: 300;
-}
-
-section {
-    padding: 4rem 2rem !important;
-    max-width: 1000px;
-    margin: 2rem auto !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    border-radius: 16px !important;
-    backdrop-filter: blur(10px);
 }
 
 h2 {
@@ -122,43 +121,17 @@ h2::after {
     margin-top: 8px;
 }
 
-.hero {
-    background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.15), transparent) !important;
-    border: 1px solid rgba(138, 43, 226, 0.2) !important;
-    text-align: center;
-}
-
 .hero img {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
     margin-top: 30px;
     box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
-    transition: transform 0.4s ease;
 }
 
-.hero img:hover {
-    transform: scale(1.02);
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    margin: 1rem 0;
-    padding-left: 1.8rem;
-    position: relative;
-    font-size: 1.05rem;
-}
-
-li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: #8a2be2;
-    font-weight: bold;
-}
+ul { list-style: none; }
+li { margin: 1rem 0; padding-left: 1.8rem; position: relative; }
+li::before { content: '→'; position: absolute; left: 0; color: #8a2be2; font-weight: bold; }
 
 .grid {
     display: grid !important;
@@ -172,13 +145,6 @@ li::before {
     padding: 25px !important;
     border-radius: 12px !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    transition: all 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: translateY(-5px);
-    background: rgba(138, 43, 226, 0.05) !important;
-    border-color: rgba(138, 43, 226, 0.4) !important;
 }
 
 .grid-item img {
@@ -189,19 +155,6 @@ li::before {
     margin-bottom: 15px;
 }
 
-.grid-item h3 {
-    font-family: 'Comfortaa', cursive !important;
-    font-size: 1.4rem;
-    color: #ffffff !important;
-    margin-bottom: 0.8rem;
-}
-
-.grid-item p {
-    color: #b3b3cc !important;
-    font-size: 0.95rem;
-}
-
-/* Configurações visuais do Quiz */
 .quiz-container {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(138, 43, 226, 0.15);
@@ -210,17 +163,7 @@ li::before {
     margin-top: 1.5rem;
 }
 
-.quiz-card h3 {
-    font-family: 'Comfortaa', cursive;
-    color: #fff;
-    margin-bottom: 1.2rem;
-}
-
-.quiz-opcoes {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+.quiz-opcoes { display: flex; flex-direction: column; gap: 12px; }
 
 .quiz-btn {
     background: rgba(255, 255, 255, 0.05);
@@ -228,90 +171,30 @@ li::before {
     color: #fff;
     padding: 14px;
     border-radius: 8px;
-    font-family: 'Kanit', sans-serif;
     font-size: 1rem;
     text-align: left;
     cursor: pointer;
-    transition: all 0.3s ease;
+    width: 100%;
 }
 
-.quiz-btn:hover:not([disabled]) {
-    background: rgba(77, 173, 255, 0.1);
-    border-color: #4dadff;
-}
-
-.quiz-btn.correta {
-    background: rgba(46, 204, 113, 0.2) !important;
-    border-color: #2ecc71 !important;
-    color: #2ecc71;
-}
-
-.quiz-btn.incorreta {
-    background: rgba(231, 76, 60, 0.2) !important;
-    border-color: #e74c3c !important;
-    color: #e74c3c;
-}
-
-.quiz-resultado {
-    text-align: center;
-    padding: 20px;
-}
-
-.quiz-resultado h4 {
-    font-family: 'Comfortaa', cursive;
-    font-size: 1.8rem;
-    color: #4dadff;
-}
-
+.quiz-btn.correta { background: rgba(46, 204, 113, 0.3) !important; border-color: #2ecc71 !important; color: #2ecc71; font-weight: bold;}
+.quiz-btn.incorreta { background: rgba(231, 76, 60, 0.3) !important; border-color: #e74c3c !important; color: #e74c3c; }
+.quiz-resultado { text-align: center; padding: 20px; }
 .hidden { display: none !important; }
-
-.form-feedback {
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.form-feedback.success {
-    background: rgba(46, 204, 113, 0.15);
-    border: 1px solid #2ecc71;
-    color: #2ecc71;
-}
 
 #contato input, #contato textarea {
     font-family: 'Kanit', sans-serif !important;
-    display: block;
-    width: 100%;
-    margin: 15px 0;
-    padding: 16px;
+    display: block; width: 100%; margin: 15px 0; padding: 16px;
     background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 8px;
-    color: #fff !important;
+    border-radius: 8px; color: #fff !important;
 }
 
 #contato button, .quiz-reiniciar {
-    font-family: 'Comfortaa', cursive !important;
     background: linear-gradient(90deg, #8a2be2, #4dadff) !important;
-    color: white !important;
-    border: none;
-    width: 100%;
-    padding: 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+    color: white !important; border: none; width: 100%; padding: 16px;
+    border-radius: 8px; font-weight: bold; cursor: pointer;
 }
-
-.quiz-reiniciar {
-    max-width: 250px;
-    margin: 15px auto 0 auto;
-}
-
-footer {
-    background: #060411 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-    color: #666680 !important;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-}
+.quiz-reiniciar { max-width: 250px; margin: 15px auto 0 auto; }
+footer { background: #060411 !important; border-top: 1px solid rgba(255, 255, 255, 0.05) !important; color: #666680 !important; text-align: center; padding: 2rem; margin-top: 4rem; }
 
