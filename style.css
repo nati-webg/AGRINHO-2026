@@ -8,30 +8,41 @@
 }
 
 body {
-    font-family: 'Oswald', sans-serif !important; /* Fonte alta para os textos normais */
+    font-family: 'Oswald', sans-serif !important;
     line-height: 1.7;
-    color: #f1f1f1 !important;
-    background-color: #0b071e !important;
+    color: #1e1145 !important; /* Texto escuro para dar contraste perfeito com o fundo claro */
+    
+    /* GRADIENTE IDÊNTICO À IMAGEM: Mistura suave de azul, roxo, rosa e amarelo */
+    background: linear-gradient(135deg, #dae7ff 0%, #b39eff 35%, #ffbde2 70%, #fff4c2 100%) !important;
+    background-attachment: fixed !important;
+    
+    /* EFEITO GRANULADO PREMIUM: Injeta uma camada sutil de textura por cima do degradê */
+    background-image: radial-gradient(rgba(0,0,0,0.15) 1px, transparent 0), linear-gradient(135deg, #dae7ff 0%, #b39eff 35%, #ffbde2 70%, #fff4c2 100%) !important;
+    background-size: 3px 3px, 100% 100% !important;
+    
     overflow-x: hidden;
     font-size: 1.1rem;
 }
 
+/* Ajuste das seções para efeito de vidro em fundo claro */
 section {
     padding: 4rem 2rem !important;
     max-width: 1000px;
     margin: 2rem auto !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background: rgba(255, 255, 255, 0.45) !important; /* Vidro branco translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
     border-radius: 16px !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px rgba(30, 17, 69, 0.05); /* Sombra sutil elegante */
 }
 
+/* Barra de Navegação Adaptada ao Novo Fundo */
 .navbar {
     position: fixed !important;
     top: 0; left: 0; width: 100%; height: 70px;
-    background: rgba(11, 7, 30, 0.95) !important;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(138, 43, 226, 0.15) !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.1) !important;
     z-index: 1000;
     display: flex; align-items: center;
 }
@@ -41,112 +52,132 @@ section {
     display: flex; justify-content: space-between; align-items: center;
 }
 
-/* Logo com a fonte alta impactante */
 .logo {
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 2rem; 
+    font-size: 2.2rem; 
     letter-spacing: 1px;
-    background: linear-gradient(90deg, #4dadff, #8a2be2);
+    background: linear-gradient(90deg, #1f5eff, #8a2be2);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
 
 .nav-links a {
     font-family: 'Bebas Neue', sans-serif !important;
-    color: #b3b3cc !important; text-decoration: none;
+    color: #4a3b75 !important; text-decoration: none;
     margin-left: 1.5rem; font-size: 1.3rem; letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #4dadff !important;
+    color: #8a2be2 !important;
 }
 
+/* Header adaptado para o estilo da imagem */
 header {
     margin-top: 70px !important;
-    background: linear-gradient(135deg, #1e0b36 0%, #0b071e 100%) !important;
-    border-bottom: 1px solid rgba(138, 43, 226, 0.2) !important;
-    padding: 4.5rem 2rem; text-align: center;
+    padding: 5.5rem 2rem 3.5rem 2rem; text-align: center;
 }
 
-/* Título Principal IDÊNTICO ao estilo da imagem enviada */
 header h1 {
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 6rem !important; 
+    font-size: 6.5rem !important; 
     font-weight: 400;
-    letter-spacing: 3px;
-    background: linear-gradient(90deg, #4dadff, #8a2be2);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    color: #1e1145 !important; /* Cor idêntica ao texto da sua imagem */
     margin-bottom: 0.5rem;
-    line-height: 1.1;
+    line-height: 1.05;
 }
 
-header p { color: #b3b3cc !important; font-size: 1.4rem; max-width: 600px; margin: auto; font-weight: 300; }
+header p { color: #4a3b75 !important; font-size: 1.4rem; max-width: 600px; margin: auto; font-weight: 400; }
 
-/* Títulos das Seções com Fonte Alta */
+/* Títulos das Seções */
 h2 { 
     font-family: 'Bebas Neue', sans-serif !important; 
     font-size: 3.5rem !important; 
-    color: #4dadff !important; 
+    color: #8a2be2 !important; /* Roxo escuro vibrante para destacar */
     margin-bottom: 1rem; 
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     line-height: 1;
 }
 
 ul { list-style: none; }
-li { margin: 1rem 0; padding-left: 1.8rem; position: relative; }
+li { margin: 1rem 0; padding-left: 1.8rem; position: relative; color: #2e1a66; }
 li::before { content: '→'; position: absolute; left: 0; color: #8a2be2; font-weight: bold; }
 
+/* Grid de Cards Estilo Vidro */
 .grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 25px; margin-top: 2rem; }
-.grid-item { background: rgba(255, 255, 255, 0.03) !important; padding: 25px !important; border-radius: 12px !important; border: 1px solid rgba(255, 255, 255, 0.08) !important; }
+.grid-item { 
+    background: rgba(255, 255, 255, 0.5) !important; 
+    padding: 25px !important; 
+    border-radius: 12px !important; 
+    border: 1px solid rgba(255, 255, 255, 0.7) !important; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.grid-item p { color: #3b2870 !important; }
 
 .grid-item h3 {
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 2rem;
-    color: #ffffff !important;
+    font-size: 2.2rem;
+    color: #1e1145 !important;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
 }
 
-.quiz-container { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(138, 43, 226, 0.15); border-radius: 12px; padding: 25px; margin-top: 1.5rem; }
+/* Container do Quiz */
+.quiz-container { background: rgba(255, 255, 255, 0.4); border: 1px solid rgba(138, 43, 226, 0.2); border-radius: 12px; padding: 25px; margin-top: 1.5rem; }
 .quiz-opcoes { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
 
 .quiz-card h3 {
     font-family: 'Oswald', sans-serif !important;
     font-size: 1.3rem;
     font-weight: 400;
+    color: #1e1145;
 }
 
 .quiz-btn {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #fff !important; padding: 14px !important; border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(138, 43, 226, 0.2) !important;
+    color: #1e1145 !important; padding: 14px !important; border-radius: 8px !important;
     font-family: 'Oswald', sans-serif !important;
     font-size: 1.1rem !important; text-align: left !important; cursor: pointer !important; width: 100% !important;
     display: block !important;
+    transition: all 0.2s ease;
 }
 
-.quiz-btn.correta { background: rgba(46, 204, 113, 0.3) !important; border-color: #2ecc71 !important; color: #2ecc71 !important; font-weight: bold; }
-.quiz-btn.incorreta { background: rgba(231, 76, 60, 0.3) !important; border-color: #e74c3c !important; color: #e74c3c !important; }
+.quiz-btn:hover { background: rgba(255, 255, 255, 0.9) !important; border-color: #8a2be2 !important; }
+
+.quiz-btn.correta { background: rgba(46, 204, 113, 0.3) !important; border-color: #2ecc71 !important; color: #155724 !important; font-weight: bold; }
+.quiz-btn.incorreta { background: rgba(231, 76, 60, 0.3) !important; border-color: #e74c3c !important; color: #721c24 !important; }
 .quiz-resultado { text-align: center; padding: 20px; }
-.quiz-resultado h4 { font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem; color: #4dadff; }
+.quiz-resultado h4 { font-family: 'Bebas Neue', sans-serif !important; font-size: 3.5rem; color: #8a2be2; }
+.quiz-resultado p { color: #1e1145 !important; }
 .hidden { display: none !important; }
 
+/* Formulário de Contato e Inputs */
 .form-feedback { padding: 15px; border-radius: 8px; margin-bottom: 15px; }
-.form-feedback.success { background: rgba(46, 204, 113, 0.15); border: 1px solid #2ecc71; color: #2ecc71; }
+.form-feedback.success { background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #155724; }
 
 #contato input, #contato textarea {
     font-family: 'Oswald', sans-serif !important;
     display: block; width: 100%; margin: 15px 0; padding: 16px;
-    background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 8px; color: #fff !important; font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.7) !important; border: 1px solid rgba(138, 43, 226, 0.2) !important;
+    border-radius: 8px; color: #1e1145 !important; font-size: 1.1rem;
 }
+
+#contato input::placeholder, #contato textarea::placeholder { color: #7665a6; }
 
 #contato button, .quiz-reiniciar {
     font-family: 'Bebas Neue', sans-serif !important;
-    background: linear-gradient(90deg, #8a2be2, #4dadff) !important;
+    background: linear-gradient(90deg, #8a2be2, #1f5eff) !important;
     color: white !important; border: none; width: 100%; padding: 14px; border-radius: 8px; 
-    font-size: 1.5rem; cursor: pointer; letter-spacing: 1px;
+    font-size: 1.6rem; cursor: pointer; letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.2);
 }
 .quiz-reiniciar { max-width: 250px; margin: 15px auto 0 auto; display: block; }
-footer { background: #060411 !important; border-top: 1px solid rgba(255, 255, 255, 0.05) !important; color: #666680 !important; text-align: center; padding: 2rem; margin-top: 4rem; }
+
+footer { 
+    background: rgba(255, 255, 255, 0.4) !important; 
+    border-top: 1px solid rgba(138, 43, 226, 0.1) !important; 
+    color: #4a3b75 !important; text-align: center; padding: 2rem; margin-top: 4rem; 
+}
