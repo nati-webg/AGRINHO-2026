@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // 1. BANCO DE DADOS DO QUIZ
     const perguntasQuiz = [
         {
             pergunta: "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             dadosQuestao.opcoes.forEach((opcao, idx) => {
                 const btn = document.createElement('button');
                 btn.className = 'quiz-btn';
-                btn.textContent = opacity = opcao;
+                btn.textContent = opcao;
                 btn.type = "button";
                 btn.addEventListener('click', function() {
                     checarRespostaQuiz(idx, btn);
@@ -101,9 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Inicialização direta do Quiz
     renderizarQuiz();
 
-    // FORMULÁRIO DE CONTATO
+    // 2. FORMULÁRIO DE CONTATO
     const formContato = document.getElementById('formContato');
     const formFeedback = document.getElementById('form-feedback');
     
@@ -119,6 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
             formContato.reset();
         });
     }
+});
+
 });
 
 
