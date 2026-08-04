@@ -1,5 +1,5 @@
-// Função principal executada imediatamente
-function iniciarQuizEContato() {
+document.addEventListener('DOMContentLoaded', function() {
+    
     const perguntasQuiz = [
         {
             pergunta: "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -39,7 +39,9 @@ function iniciarQuizEContato() {
                 btn.className = 'quiz-btn';
                 btn.textContent = opcao;
                 btn.type = "button";
-                btn.onclick = function() { checarRespostaQuiz(idx, btn); };
+                btn.addEventListener('click', function() {
+                    checarRespostaQuiz(idx, btn);
+                });
                 elementoOpcoes.appendChild(btn);
             });
         } else {
@@ -85,7 +87,7 @@ function iniciarQuizEContato() {
                 <button class="quiz-reiniciar" id="btn-reiniciar-quiz">Refazer Quiz</button>
             `;
 
-            document.getElementById('btn-reiniciar-quiz').onclick = reiniciarQuiz;
+            document.getElementById('btn-reiniciar-quiz').addEventListener('click', reiniciarQuiz);
         }
     }
 
@@ -99,15 +101,15 @@ function iniciarQuizEContato() {
         }
     }
 
-    // Executa a renderização inicial
+    // Inicialização direta do Quiz
     renderizarQuiz();
 
-    // 2. CONFIGURAÇÃO DO FORMULÁRIO DE CONTATO
+    // 2. FORMULÁRIO DE CONTATO
     const formContato = document.getElementById('formContato');
     const formFeedback = document.getElementById('form-feedback');
     
     if (formContato && formFeedback) {
-        formContato.onsubmit = function(e) {
+        formContato.addEventListener('submit', function(e) {
             e.preventDefault();
             const nome = document.getElementById('nome').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -116,12 +118,8 @@ function iniciarQuizEContato() {
             formFeedback.className = 'form-feedback success';
             formFeedback.classList.remove('hidden');
             formContato.reset();
-        };
+        });
     }
-}
+});
 
-// Dispara a inicialização de todas as formas possíveis para garantir o funcionamento
-iniciarQuizEContato();
-window.onload = iniciarQuizEContato;
-document.addEventListener('DOMContentLoaded', iniciarQuizEContato);
 
