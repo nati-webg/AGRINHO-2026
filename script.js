@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // 1. BANCO DE DADOS DO QUIZ
+// Função principal executada imediatamente
+function iniciarQuizEContato() {
     const perguntasQuiz = [
         {
             pergunta: "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -40,9 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.className = 'quiz-btn';
                 btn.textContent = opcao;
                 btn.type = "button";
-                btn.addEventListener('click', function() {
-                    checarRespostaQuiz(idx, btn);
-                });
+                btn.onclick = function() { checarRespostaQuiz(idx, btn); };
                 elementoOpcoes.appendChild(btn);
             });
         } else {
@@ -88,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="quiz-reiniciar" id="btn-reiniciar-quiz">Refazer Quiz</button>
             `;
 
-            document.getElementById('btn-reiniciar-quiz').addEventListener('click', reiniciarQuiz);
+            document.getElementById('btn-reiniciar-quiz').onclick = reiniciarQuiz;
         }
     }
 
@@ -102,15 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Inicialização direta do Quiz
+    // Executa a renderização inicial
     renderizarQuiz();
 
-    // 2. FORMULÁRIO DE CONTATO
+    // 2. CONFIGURAÇÃO DO FORMULÁRIO DE CONTATO
     const formContato = document.getElementById('formContato');
     const formFeedback = document.getElementById('form-feedback');
     
     if (formContato && formFeedback) {
-        formContato.addEventListener('submit', function(e) {
+        formContato.onsubmit = function(e) {
             e.preventDefault();
             const nome = document.getElementById('nome').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -119,10 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
             formFeedback.className = 'form-feedback success';
             formFeedback.classList.remove('hidden');
             formContato.reset();
-        });
+        };
     }
-});
+}
 
-});
-
+// Dispara a inicialização de todas as formas possíveis para garantir o funcionamento
+iniciarQuizEContato();
+window.onload = iniciarQuizEContato;
+document.addEventListener('DOMContentLoaded', iniciarQuizEContato);
 
