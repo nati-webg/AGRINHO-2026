@@ -16,6 +16,8 @@
                 <a href="#producao">Produção</a>
                 <a href="#sustentabilidade">Sustentabilidade</a>
                 <a href="#desafios">Desafios</a>
+                <a href="#solucoes">Inovações</a>
+                <a href="#quiz">Quiz</a>
                 <a href="#contato">Contato</a>
             </div>
         </div>
@@ -28,8 +30,8 @@
 
     <section class="hero">
         <h2>Bem-vindo à Agricultura Moderna</h2>
-        <p>Descubra como a tecnologia e o agronegócio inteligente podem crescer economicamente sem prejudicar os recursos naturais das futuras gerações.</p>
-        <img src="https://unsplash.com" alt="Drones sobrevoando lavouras">
+        <p>Descubra como a tecnologia e o agronegócio inteligente podem crescer economicamente sem prejudicar os recursos naturais das futuras gerais.</p>
+        <img src="https://unsplash.com" alt="Drones de alta tecnologia sobrevoando lavouras verdes">
     </section>
 
     <section id="producao">
@@ -45,17 +47,17 @@
         <h2>Práticas Sustentáveis no Campo</h2>
         <div class="grid">
             <div class="grid-item">
-                <img src="https://unsplash.com" alt="Plantio direto no solo">
+                <img src="https://unsplash.com" alt="Plantio direto no solo com brotos verdes surgindo">
                 <h3>Solo Vivo</h3>
                 <p>Uso prático do plantio direto e rotação estratégica de culturas.</p>
             </div>
             <div class="grid-item">
-                <img src="https://unsplash.com" alt="Irrigação inteligente">
+                <img src="https://unsplash.com" alt="Sistemas modernos de irrigação inteligente aspergindo água">
                 <h3>Água Inteligente</h3>
                 <p>Sistemas automatizados de irrigação com foco em economia de recursos.</p>
             </div>
             <div class="grid-item">
-                <img src="https://unsplash.com" alt="Painéis solares na agricultura">
+                <img src="https://unsplash.com" alt="Painéis solares fotovoltaicos instalados em área rural ao pôr do sol">
                 <h3>Energia Limpa</h3>
                 <p>Implementação em larga escala de painéis solares e bioenergia.</p>
             </div>
@@ -72,9 +74,31 @@
         <p>Através da agricultura regenerativa e do monitoramento de precisão baseado em dados, transformamos impacto ambiental em resultados positivos.</p>
     </section>
 
+    <!-- NOVA SEÇÃO: Quiz Interativo de Engajamento -->
+    <section id="quiz">
+        <h2>Teste Seus Conhecimentos</h2>
+        <p>Descubra se você conhece as principais tecnologias do campo sustentável respondendo ao nosso quiz rápido!</p>
+        
+        <div class="quiz-container">
+            <div class="quiz-card" id="quiz-card">
+                <h3 id="quiz-pergunta">Carregando pergunta...</h3>
+                <div class="quiz-opcoes" id="quiz-opcoes">
+                    <!-- Opções injetadas via JS -->
+                </div>
+            </div>
+            <div id="quiz-resultado" class="quiz-resultado hidden">
+                <!-- Resultado final injetado via JS -->
+            </div>
+        </div>
+    </section>
+
     <section id="contato">
         <h2>Participe e Faça a Diferença</h2>
         <p>Envie sua mensagem com sugestões, dúvidas ou propostas de parcerias para nossa equipe.</p>
+        
+        <!-- Elemento para exibir mensagens de feedback do formulário -->
+        <div id="form-feedback" class="form-feedback hidden"></div>
+
         <form id="formContato">
             <input type="text" id="nome" placeholder="Seu nome" required>
             <input type="email" id="email" placeholder="Seu e-mail" required>
@@ -90,3 +114,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
