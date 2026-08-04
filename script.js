@@ -1,7 +1,7 @@
-// Aguarda o carregamento seguro da janela
-window.addEventListener('load', function() {
+// Removemos travas complexas e executamos a lógica direto de forma linear e limpa
+function iniciarSistemaCompleto() {
     
-    // 1. BANCO DE DADOS E LÓGICA COMPLETA DO QUIZ INTERATIVO
+    // 1. DADOS E OPERAÇÃO DO QUIZ
     const perguntasQuiz = [
         {
             pergunta: "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
                 const btn = document.createElement('button');
                 btn.className = 'quiz-btn';
                 btn.textContent = opcao;
-                btn.addEventListener('click', () => checarRespostaQuiz(idx, btn));
+                btn.onclick = function() { checarRespostaQuiz(idx, btn); };
                 elementoOpcoes.appendChild(btn);
             });
         } else {
@@ -86,7 +86,7 @@ window.addEventListener('load', function() {
                 <button class="quiz-reiniciar" id="btn-reiniciar-quiz">Refazer Quiz</button>
             `;
 
-            document.getElementById('btn-reiniciar-quiz').addEventListener('click', reiniciarQuiz);
+            document.getElementById('btn-reiniciar-quiz').onclick = reiniciarQuiz;
         }
     }
 
@@ -100,7 +100,6 @@ window.addEventListener('load', function() {
         }
     }
 
-    // Inicia o Quiz de forma limpa e segura
     renderizarQuiz();
 
     // 2. FORMULÁRIO DE CONTATO
@@ -108,7 +107,7 @@ window.addEventListener('load', function() {
     const formFeedback = document.getElementById('form-feedback');
     
     if (formContato && formFeedback) {
-        formContato.addEventListener('submit', function(e) {
+        formContato.onsubmit = function(e) {
             e.preventDefault();
             const nome = document.getElementById('nome').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -117,24 +116,10 @@ window.addEventListener('load', function() {
             formFeedback.className = 'form-feedback success';
             formFeedback.classList.remove('hidden');
             formContato.reset();
-        });
+        };
     }
-    
-    // 3. EFEITO DE SCROLL SUAVE DOS LINKS DO MENU
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const hrefAttr = this.getAttribute('href');
-            if (hrefAttr === '#') return;
-            e.preventDefault();
-            const target = document.querySelector(hrefAttr);
-            if (target) {
-                window.scrollTo({
-                    top: target.getBoundingClientRect().top + window.pageYOffset - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+}
 
-    console.log("🚀 Sistema carregado em arquivos separados com sucesso!");
-});
+// Executa imediatamente e também ao carregar a janela por segurança total
+iniciarSistemaCompleto();
+window.onload = iniciarSistemaCompleto;
