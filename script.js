@@ -1,7 +1,5 @@
-// Aguarda o carregamento seguro da janela
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
     
-    // 1. BANCO DE DADOS DO QUIZ
     const perguntasQuiz = [
         {
             pergunta: "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -39,8 +37,11 @@ window.addEventListener('load', function() {
             dadosQuestao.opcoes.forEach((opcao, idx) => {
                 const btn = document.createElement('button');
                 btn.className = 'quiz-btn';
-                btn.textContent = opcao;
-                btn.onclick = function() { checarRespostaQuiz(idx, btn); };
+                btn.textContent = opacity = opcao;
+                btn.type = "button";
+                btn.addEventListener('click', function() {
+                    checarRespostaQuiz(idx, btn);
+                });
                 elementoOpcoes.appendChild(btn);
             });
         } else {
@@ -67,7 +68,7 @@ window.addEventListener('load', function() {
         setTimeout(() => {
             perguntaAtualIdx++;
             renderizarQuiz();
-        }, 1500);
+        }, 1200);
     }
 
     function exibirResultadoFinalQuiz() {
@@ -81,12 +82,12 @@ window.addEventListener('load', function() {
 
             elementoResultadoQuiz.innerHTML = `
                 <h4>Quiz Concluído!</h4>
-                <p>Você acertou <strong>${pontuacaoFinal} de ${perguntasQuiz.length}</strong> questões.</p>
+                <p style="margin: 10px 0;">Você acertou <strong>${pontuacaoFinal} de ${perguntasQuiz.length}</strong> questões.</p>
                 <p>Sua Classificação: <strong>${medalha}</strong></p>
                 <button class="quiz-reiniciar" id="btn-reiniciar-quiz">Refazer Quiz</button>
             `;
 
-            document.getElementById('btn-reiniciar-quiz').onclick = reiniciarQuiz;
+            document.getElementById('btn-reiniciar-quiz').addEventListener('click', reiniciarQuiz);
         }
     }
 
@@ -100,40 +101,24 @@ window.addEventListener('load', function() {
         }
     }
 
-    // Inicializa o Quiz
     renderizarQuiz();
 
-    // 2. FORMULÁRIO DE CONTATO
+    // FORMULÁRIO DE CONTATO
     const formContato = document.getElementById('formContato');
     const formFeedback = document.getElementById('form-feedback');
     
     if (formContato && formFeedback) {
-        formContato.onsubmit = function(e) {
+        formContato.addEventListener('submit', function(e) {
             e.preventDefault();
             const nome = document.getElementById('nome').value.trim();
             const email = document.getElementById('email').value.trim();
             
-            formFeedback.textContent = `Obrigado, ${nome}! Mensagem enviada. Retornaremos em: ${email}.`;
+            formFeedback.textContent = `Obrigado, ${nome}! Mensagem enviada com sucesso para o e-mail ${email}.`;
             formFeedback.className = 'form-feedback success';
             formFeedback.classList.remove('hidden');
             formContato.reset();
-        };
-    }
-    
-    // 3. SCROLL SUAVE
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const hrefAttr = this.getAttribute('href');
-            if (hrefAttr === '#') return;
-            e.preventDefault();
-            const target = document.querySelector(hrefAttr);
-            if (target) {
-                window.scrollTo({
-                    top: target.getBoundingClientRect().top + window.pageYOffset - 80,
-                    behavior: 'smooth'
-                });
-            }
         });
-    });
+    }
 });
+
 
