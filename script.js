@@ -1,7 +1,7 @@
-// Removemos travas complexas e executamos a lógica direto de forma linear e limpa
-function iniciarSistemaCompleto() {
+// Aguarda o carregamento seguro da janela
+window.addEventListener('load', function() {
     
-    // 1. DADOS E OPERAÇÃO DO QUIZ
+    // 1. BANCO DE DADOS DO QUIZ
     const perguntasQuiz = [
         {
             pergunta: "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -100,6 +100,7 @@ function iniciarSistemaCompleto() {
         }
     }
 
+    // Inicializa o Quiz
     renderizarQuiz();
 
     // 2. FORMULÁRIO DE CONTATO
@@ -118,8 +119,21 @@ function iniciarSistemaCompleto() {
             formContato.reset();
         };
     }
-}
+    
+    // 3. SCROLL SUAVE
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const hrefAttr = this.getAttribute('href');
+            if (hrefAttr === '#') return;
+            e.preventDefault();
+            const target = document.querySelector(hrefAttr);
+            if (target) {
+                window.scrollTo({
+                    top: target.getBoundingClientRect().top + window.pageYOffset - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
 
-// Executa imediatamente e também ao carregar a janela por segurança total
-iniciarSistemaCompleto();
-window.onload = iniciarSistemaCompleto;
