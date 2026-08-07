@@ -1,13 +1,13 @@
-/* =========================================
-   GOOGLE FONTS
-========================================= */
+/* =========================================================
+   FONTES
+========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&display=swap');
 
 
-/* =========================================
+/* =========================================================
    RESET
-========================================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -16,11 +16,12 @@
 }
 
 
-/* =========================================
+/* =========================================================
    BODY
-========================================= */
+========================================================= */
 
 body {
+
     font-family: 'Oswald', sans-serif !important;
 
     line-height: 1.7;
@@ -52,20 +53,23 @@ body {
 }
 
 
-/* =========================================
+/* =========================================================
    SEÇÕES
-========================================= */
+========================================================= */
 
 section {
+
     padding: 4rem 2rem !important;
 
     max-width: 1000px;
 
     margin: 2rem auto !important;
 
-    background: rgba(255, 255, 255, 0.45) !important;
+    background:
+        rgba(255, 255, 255, 0.45) !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border:
+        1px solid rgba(255, 255, 255, 0.6) !important;
 
     border-radius: 16px !important;
 
@@ -76,20 +80,23 @@ section {
 }
 
 
-/* =========================================
+/* =========================================================
    NAVBAR
-========================================= */
+========================================================= */
 
 .navbar {
+
     position: fixed !important;
 
     top: 0;
     left: 0;
 
     width: 100%;
+
     height: 70px;
 
-    background: rgba(255, 255, 255, 0.6) !important;
+    background:
+        rgba(255, 255, 255, 0.6) !important;
 
     backdrop-filter: blur(16px);
 
@@ -104,6 +111,7 @@ section {
 
 
 .nav-container {
+
     width: 100%;
 
     max-width: 1200px;
@@ -121,7 +129,10 @@ section {
 
 
 .logo {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     font-size: 2.2rem;
 
@@ -143,7 +154,10 @@ section {
 
 
 .nav-links a {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     color: #4a3b75 !important;
 
@@ -164,11 +178,12 @@ section {
 }
 
 
-/* =========================================
+/* =========================================================
    HEADER
-========================================= */
+========================================================= */
 
 header {
+
     margin-top: 70px !important;
 
     padding:
@@ -182,7 +197,10 @@ header {
 
 
 header h1 {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     font-size: 6.5rem !important;
 
@@ -199,6 +217,7 @@ header h1 {
 
 
 header p {
+
     color: #4a3b75 !important;
 
     font-size: 1.4rem;
@@ -211,12 +230,15 @@ header p {
 }
 
 
-/* =========================================
+/* =========================================================
    TÍTULOS
-========================================= */
+========================================================= */
 
 h2 {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     font-size: 3.5rem !important;
 
@@ -230,9 +252,9 @@ h2 {
 }
 
 
-/* =========================================
+/* =========================================================
    HERO
-========================================= */
+========================================================= */
 
 .hero {
     text-align: center;
@@ -240,52 +262,43 @@ h2 {
 
 
 .hero p {
+
     max-width: 800px;
 
     margin: 0 auto;
 }
 
 
-.hero-image {
+/* =========================================================
+   VÍDEO
+========================================================= */
+
+.hero-video {
+
     width: 100%;
 
-    max-width: 800px;
+    max-width: 700px;
 
-    height: 400px;
+    height: 350px;
 
     object-fit: cover;
 
-    border-radius: 12px;
-
-    margin-top: 25px;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.1);
-
     display: block;
-
-    margin-left: auto;
-
-    margin-right: auto;
-}
-
-
-.hero-svg-container {
-    width: 100%;
-
-    max-width: 800px;
 
     margin: 25px auto 0;
 
-    overflow: hidden;
+    border-radius: 12px;
 
-    border-radius: 8px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+
+    background: #130f26;
 }
 
 
-/* =========================================
+/* =========================================================
    LISTAS
-========================================= */
+========================================================= */
 
 ul {
     list-style: none;
@@ -293,6 +306,7 @@ ul {
 
 
 li {
+
     margin: 1rem 0;
 
     padding-left: 1.8rem;
@@ -304,6 +318,7 @@ li {
 
 
 li::before {
+
     content: '→';
 
     position: absolute;
@@ -316,11 +331,12 @@ li::before {
 }
 
 
-/* =========================================
+/* =========================================================
    GRID
-========================================= */
+========================================================= */
 
 .grid {
+
     display: grid !important;
 
     grid-template-columns:
@@ -336,7 +352,9 @@ li::before {
 
 
 .grid-item {
-    background: rgba(255, 255, 255, 0.5) !important;
+
+    background:
+        rgba(255, 255, 255, 0.5) !important;
 
     padding: 25px !important;
 
@@ -356,7 +374,10 @@ li::before {
 
 
 .grid-item h3 {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     font-size: 2.2rem;
 
@@ -368,11 +389,12 @@ li::before {
 }
 
 
-/* =========================================
-   IMAGENS DOS CARDS
-========================================= */
+/* =========================================================
+   IMAGENS
+========================================================= */
 
 .image-container {
+
     padding: 10px;
 
     border-radius: 8px;
@@ -384,7 +406,9 @@ li::before {
 
 
 .image-container.green {
-    background: rgba(46, 204, 113, 0.05);
+
+    background:
+        rgba(46, 204, 113, 0.05);
 
     border-color:
         rgba(46, 204, 113, 0.2);
@@ -392,7 +416,9 @@ li::before {
 
 
 .image-container.blue {
-    background: rgba(77, 173, 255, 0.05);
+
+    background:
+        rgba(77, 173, 255, 0.05);
 
     border-color:
         rgba(77, 173, 255, 0.2);
@@ -400,7 +426,9 @@ li::before {
 
 
 .image-container.yellow {
-    background: rgba(241, 196, 15, 0.05);
+
+    background:
+        rgba(241, 196, 15, 0.05);
 
     border-color:
         rgba(241, 196, 15, 0.2);
@@ -408,9 +436,10 @@ li::before {
 
 
 .image-container img {
+
     width: 100%;
 
-    height: 180px;
+    height: 160px;
 
     object-fit: cover;
 
@@ -420,11 +449,12 @@ li::before {
 }
 
 
-/* =========================================
+/* =========================================================
    QUIZ
-========================================= */
+========================================================= */
 
 .quiz-container {
+
     background:
         rgba(255, 255, 255, 0.4);
 
@@ -440,6 +470,7 @@ li::before {
 
 
 .quiz-opcoes {
+
     display: flex;
 
     flex-direction: column;
@@ -451,7 +482,10 @@ li::before {
 
 
 .quiz-card h3 {
-    font-family: 'Oswald', sans-serif !important;
+
+    font-family:
+        'Oswald',
+        sans-serif !important;
 
     font-size: 1.3rem;
 
@@ -462,6 +496,7 @@ li::before {
 
 
 .quiz-btn {
+
     background:
         rgba(255, 255, 255, 0.7) !important;
 
@@ -474,7 +509,9 @@ li::before {
 
     border-radius: 8px !important;
 
-    font-family: 'Oswald', sans-serif !important;
+    font-family:
+        'Oswald',
+        sans-serif !important;
 
     font-size: 1.1rem !important;
 
@@ -491,6 +528,7 @@ li::before {
 
 
 .quiz-btn:hover {
+
     background:
         rgba(255, 255, 255, 0.9) !important;
 
@@ -500,6 +538,7 @@ li::before {
 
 
 .quiz-btn.correta {
+
     background:
         rgba(46, 204, 113, 0.3) !important;
 
@@ -513,6 +552,7 @@ li::before {
 
 
 .quiz-btn.incorreta {
+
     background:
         rgba(231, 76, 60, 0.3) !important;
 
@@ -524,6 +564,7 @@ li::before {
 
 
 .quiz-resultado {
+
     text-align: center;
 
     padding: 20px;
@@ -531,7 +572,10 @@ li::before {
 
 
 .quiz-resultado h4 {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     font-size: 3.5rem;
 
@@ -549,11 +593,12 @@ li::before {
 }
 
 
-/* =========================================
+/* =========================================================
    FORMULÁRIO
-========================================= */
+========================================================= */
 
 .form-feedback {
+
     padding: 15px;
 
     border-radius: 8px;
@@ -563,6 +608,7 @@ li::before {
 
 
 .form-feedback.success {
+
     background:
         rgba(46, 204, 113, 0.2);
 
@@ -575,7 +621,10 @@ li::before {
 
 #contato input,
 #contato textarea {
-    font-family: 'Oswald', sans-serif !important;
+
+    font-family:
+        'Oswald',
+        sans-serif !important;
 
     display: block;
 
@@ -601,13 +650,17 @@ li::before {
 
 #contato input::placeholder,
 #contato textarea::placeholder {
+
     color: #7665a6;
 }
 
 
 #contato button,
 .quiz-reiniciar {
-    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif !important;
 
     background:
         linear-gradient(
@@ -638,6 +691,7 @@ li::before {
 
 
 .quiz-reiniciar {
+
     max-width: 250px;
 
     margin: 15px auto 0 auto;
@@ -646,11 +700,12 @@ li::before {
 }
 
 
-/* =========================================
+/* =========================================================
    FOOTER
-========================================= */
+========================================================= */
 
 footer {
+
     background:
         rgba(255, 255, 255, 0.4) !important;
 
@@ -667,9 +722,9 @@ footer {
 }
 
 
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -678,34 +733,41 @@ footer {
     }
 
     .nav-links a {
+
         margin-left: 0.7rem;
 
         font-size: 1rem;
     }
 
     header h1 {
+
         font-size: 4.5rem !important;
     }
-
 }
 
+
+/* =========================================================
+   CELULAR
+========================================================= */
 
 @media (max-width: 650px) {
 
     .navbar {
+
         height: auto;
 
         min-height: 70px;
     }
 
     .nav-container {
+
         flex-direction: column;
 
-        padding:
-            10px 1rem;
+        padding: 10px 1rem;
     }
 
     .nav-links {
+
         display: flex;
 
         flex-wrap: wrap;
@@ -718,12 +780,14 @@ footer {
     }
 
     .nav-links a {
+
         margin-left: 0;
 
         font-size: 0.95rem;
     }
 
     header {
+
         margin-top: 120px !important;
 
         padding:
@@ -731,14 +795,17 @@ footer {
     }
 
     header h1 {
+
         font-size: 3.5rem !important;
     }
 
     header p {
+
         font-size: 1.1rem;
     }
 
     section {
+
         padding:
             2.5rem 1.2rem !important;
 
@@ -747,11 +814,19 @@ footer {
     }
 
     h2 {
+
         font-size: 2.8rem !important;
     }
 
-    .hero-image {
-        height: 250px;
+    .hero-video {
+
+        height: 230px;
+
+        max-width: 100%;
     }
 
+    .image-container img {
+
+        height: 150px;
+    }
 }
