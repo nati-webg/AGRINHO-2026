@@ -1,5 +1,13 @@
-/* Importação das Novas Fontes Altas e Condensadas do Google Fonts */
-@import url('https://googleapis.com');
+/* =========================================
+   GOOGLE FONTS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -7,177 +15,743 @@
     box-sizing: border-box;
 }
 
+
+/* =========================================
+   BODY
+========================================= */
+
 body {
     font-family: 'Oswald', sans-serif !important;
+
     line-height: 1.7;
-    color: #1e1145 !important; /* Texto escuro para dar contraste perfeito com o fundo claro */
-    
-    /* GRADIENTE IDÊNTICO À IMAGEM: Mistura suave de azul, roxo, rosa e amarelo */
-    background: linear-gradient(135deg, #dae7ff 0%, #b39eff 35%, #ffbde2 70%, #fff4c2 100%) !important;
+
+    color: #1e1145 !important;
+
+    background:
+        radial-gradient(
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 0
+        ),
+        linear-gradient(
+            135deg,
+            #dae7ff 0%,
+            #b39eff 35%,
+            #ffbde2 70%,
+            #fff4c2 100%
+        ) !important;
+
+    background-size:
+        3px 3px,
+        100% 100% !important;
+
     background-attachment: fixed !important;
-    
-    /* EFEITO GRANULADO PREMIUM: Injeta uma camada sutil de textura por cima do degradê */
-    background-image: radial-gradient(rgba(0,0,0,0.15) 1px, transparent 0), linear-gradient(135deg, #dae7ff 0%, #b39eff 35%, #ffbde2 70%, #fff4c2 100%) !important;
-    background-size: 3px 3px, 100% 100% !important;
-    
+
     overflow-x: hidden;
+
     font-size: 1.1rem;
 }
 
-/* Ajuste das seções para efeito de vidro em fundo claro */
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
 section {
     padding: 4rem 2rem !important;
+
     max-width: 1000px;
+
     margin: 2rem auto !important;
-    background: rgba(255, 255, 255, 0.45) !important; /* Vidro branco translúcido */
+
+    background: rgba(255, 255, 255, 0.45) !important;
+
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
+
     border-radius: 16px !important;
+
     backdrop-filter: blur(16px);
-    box-shadow: 0 10px 30px rgba(30, 17, 69, 0.05); /* Sombra sutil elegante */
+
+    box-shadow:
+        0 10px 30px rgba(30, 17, 69, 0.05);
 }
 
-/* Barra de Navegação Adaptada ao Novo Fundo */
+
+/* =========================================
+   NAVBAR
+========================================= */
+
 .navbar {
     position: fixed !important;
-    top: 0; left: 0; width: 100%; height: 70px;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
     background: rgba(255, 255, 255, 0.6) !important;
+
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(138, 43, 226, 0.1) !important;
+
+    border-bottom:
+        1px solid rgba(138, 43, 226, 0.1) !important;
+
     z-index: 1000;
-    display: flex; align-items: center;
+
+    display: flex;
+    align-items: center;
 }
 
+
 .nav-container {
-    width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-    display: flex; justify-content: space-between; align-items: center;
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 2rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
 }
+
 
 .logo {
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 2.2rem; 
+
+    font-size: 2.2rem;
+
     letter-spacing: 1px;
-    background: linear-gradient(90deg, #1f5eff, #8a2be2);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1f5eff,
+            #8a2be2
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
     text-decoration: none;
 }
 
+
 .nav-links a {
     font-family: 'Bebas Neue', sans-serif !important;
-    color: #4a3b75 !important; text-decoration: none;
-    margin-left: 1.5rem; font-size: 1.3rem; letter-spacing: 1px;
+
+    color: #4a3b75 !important;
+
+    text-decoration: none;
+
+    margin-left: 1.5rem;
+
+    font-size: 1.3rem;
+
+    letter-spacing: 1px;
+
     transition: color 0.3s ease;
 }
+
 
 .nav-links a:hover {
     color: #8a2be2 !important;
 }
 
-/* Header adaptado para o estilo da imagem */
+
+/* =========================================
+   HEADER
+========================================= */
+
 header {
     margin-top: 70px !important;
-    padding: 5.5rem 2rem 3.5rem 2rem; text-align: center;
+
+    padding:
+        5.5rem
+        2rem
+        3.5rem
+        2rem;
+
+    text-align: center;
 }
+
 
 header h1 {
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 6.5rem !important; 
+
+    font-size: 6.5rem !important;
+
     font-weight: 400;
+
     letter-spacing: 2px;
-    color: #1e1145 !important; /* Cor idêntica ao texto da sua imagem */
+
+    color: #1e1145 !important;
+
     margin-bottom: 0.5rem;
+
     line-height: 1.05;
 }
 
-header p { color: #4a3b75 !important; font-size: 1.4rem; max-width: 600px; margin: auto; font-weight: 400; }
 
-/* Títulos das Seções */
-h2 { 
-    font-family: 'Bebas Neue', sans-serif !important; 
-    font-size: 3.5rem !important; 
-    color: #8a2be2 !important; /* Roxo escuro vibrante para destacar */
-    margin-bottom: 1rem; 
+header p {
+    color: #4a3b75 !important;
+
+    font-size: 1.4rem;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif !important;
+
+    font-size: 3.5rem !important;
+
+    color: #8a2be2 !important;
+
+    margin-bottom: 1rem;
+
     letter-spacing: 1.5px;
+
     line-height: 1;
 }
 
-ul { list-style: none; }
-li { margin: 1rem 0; padding-left: 1.8rem; position: relative; color: #2e1a66; }
-li::before { content: '→'; position: absolute; left: 0; color: #8a2be2; font-weight: bold; }
 
-/* Grid de Cards Estilo Vidro */
-.grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 25px; margin-top: 2rem; }
-.grid-item { 
-    background: rgba(255, 255, 255, 0.5) !important; 
-    padding: 25px !important; 
-    border-radius: 12px !important; 
-    border: 1px solid rgba(255, 255, 255, 0.7) !important; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    text-align: center;
 }
 
-.grid-item p { color: #3b2870 !important; }
+
+.hero p {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+.hero-image {
+    width: 100%;
+
+    max-width: 800px;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.1);
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.hero-svg-container {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 25px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   LISTAS
+========================================= */
+
+ul {
+    list-style: none;
+}
+
+
+li {
+    margin: 1rem 0;
+
+    padding-left: 1.8rem;
+
+    position: relative;
+
+    color: #2e1a66;
+}
+
+
+li::before {
+    content: '→';
+
+    position: absolute;
+
+    left: 0;
+
+    color: #8a2be2;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        ) !important;
+
+    gap: 25px;
+
+    margin-top: 2rem;
+}
+
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.5) !important;
+
+    padding: 25px !important;
+
+    border-radius: 12px !important;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.7) !important;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+
+.grid-item p {
+    color: #3b2870 !important;
+}
+
 
 .grid-item h3 {
     font-family: 'Bebas Neue', sans-serif !important;
+
     font-size: 2.2rem;
+
     color: #1e1145 !important;
+
     margin-bottom: 0.5rem;
+
     letter-spacing: 1px;
 }
 
-/* Container do Quiz */
-.quiz-container { background: rgba(255, 255, 255, 0.4); border: 1px solid rgba(138, 43, 226, 0.2); border-radius: 12px; padding: 25px; margin-top: 1.5rem; }
-.quiz-opcoes { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+
+/* =========================================
+   IMAGENS DOS CARDS
+========================================= */
+
+.image-container {
+    padding: 10px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid;
+}
+
+
+.image-container.green {
+    background: rgba(46, 204, 113, 0.05);
+
+    border-color:
+        rgba(46, 204, 113, 0.2);
+}
+
+
+.image-container.blue {
+    background: rgba(77, 173, 255, 0.05);
+
+    border-color:
+        rgba(77, 173, 255, 0.2);
+}
+
+
+.image-container.yellow {
+    background: rgba(241, 196, 15, 0.05);
+
+    border-color:
+        rgba(241, 196, 15, 0.2);
+}
+
+
+.image-container img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-container {
+    background:
+        rgba(255, 255, 255, 0.4);
+
+    border:
+        1px solid rgba(138, 43, 226, 0.2);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-top: 1.5rem;
+}
+
+
+.quiz-opcoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
 
 .quiz-card h3 {
     font-family: 'Oswald', sans-serif !important;
+
     font-size: 1.3rem;
+
     font-weight: 400;
+
     color: #1e1145;
 }
 
+
 .quiz-btn {
-    background: rgba(255, 255, 255, 0.7) !important;
-    border: 1px solid rgba(138, 43, 226, 0.2) !important;
-    color: #1e1145 !important; padding: 14px !important; border-radius: 8px !important;
+    background:
+        rgba(255, 255, 255, 0.7) !important;
+
+    border:
+        1px solid rgba(138, 43, 226, 0.2) !important;
+
+    color: #1e1145 !important;
+
+    padding: 14px !important;
+
+    border-radius: 8px !important;
+
     font-family: 'Oswald', sans-serif !important;
-    font-size: 1.1rem !important; text-align: left !important; cursor: pointer !important; width: 100% !important;
+
+    font-size: 1.1rem !important;
+
+    text-align: left !important;
+
+    cursor: pointer !important;
+
+    width: 100% !important;
+
     display: block !important;
+
     transition: all 0.2s ease;
 }
 
-.quiz-btn:hover { background: rgba(255, 255, 255, 0.9) !important; border-color: #8a2be2 !important; }
 
-.quiz-btn.correta { background: rgba(46, 204, 113, 0.3) !important; border-color: #2ecc71 !important; color: #155724 !important; font-weight: bold; }
-.quiz-btn.incorreta { background: rgba(231, 76, 60, 0.3) !important; border-color: #e74c3c !important; color: #721c24 !important; }
-.quiz-resultado { text-align: center; padding: 20px; }
-.quiz-resultado h4 { font-family: 'Bebas Neue', sans-serif !important; font-size: 3.5rem; color: #8a2be2; }
-.quiz-resultado p { color: #1e1145 !important; }
-.hidden { display: none !important; }
+.quiz-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.9) !important;
 
-/* Formulário de Contato e Inputs */
-.form-feedback { padding: 15px; border-radius: 8px; margin-bottom: 15px; }
-.form-feedback.success { background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #155724; }
-
-#contato input, #contato textarea {
-    font-family: 'Oswald', sans-serif !important;
-    display: block; width: 100%; margin: 15px 0; padding: 16px;
-    background: rgba(255, 255, 255, 0.7) !important; border: 1px solid rgba(138, 43, 226, 0.2) !important;
-    border-radius: 8px; color: #1e1145 !important; font-size: 1.1rem;
+    border-color:
+        #8a2be2 !important;
 }
 
-#contato input::placeholder, #contato textarea::placeholder { color: #7665a6; }
 
-#contato button, .quiz-reiniciar {
+.quiz-btn.correta {
+    background:
+        rgba(46, 204, 113, 0.3) !important;
+
+    border-color:
+        #2ecc71 !important;
+
+    color: #155724 !important;
+
+    font-weight: bold;
+}
+
+
+.quiz-btn.incorreta {
+    background:
+        rgba(231, 76, 60, 0.3) !important;
+
+    border-color:
+        #e74c3c !important;
+
+    color: #721c24 !important;
+}
+
+
+.quiz-resultado {
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.quiz-resultado h4 {
     font-family: 'Bebas Neue', sans-serif !important;
-    background: linear-gradient(90deg, #8a2be2, #1f5eff) !important;
-    color: white !important; border: none; width: 100%; padding: 14px; border-radius: 8px; 
-    font-size: 1.6rem; cursor: pointer; letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.2);
-}
-.quiz-reiniciar { max-width: 250px; margin: 15px auto 0 auto; display: block; }
 
-footer { 
-    background: rgba(255, 255, 255, 0.4) !important; 
-    border-top: 1px solid rgba(138, 43, 226, 0.1) !important; 
-    color: #4a3b75 !important; text-align: center; padding: 2rem; margin-top: 4rem; 
+    font-size: 3.5rem;
+
+    color: #8a2be2;
+}
+
+
+.quiz-resultado p {
+    color: #1e1145 !important;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-feedback {
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.form-feedback.success {
+    background:
+        rgba(46, 204, 113, 0.2);
+
+    border:
+        1px solid #2ecc71;
+
+    color: #155724;
+}
+
+
+#contato input,
+#contato textarea {
+    font-family: 'Oswald', sans-serif !important;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 15px 0;
+
+    padding: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.7) !important;
+
+    border:
+        1px solid rgba(138, 43, 226, 0.2) !important;
+
+    border-radius: 8px;
+
+    color: #1e1145 !important;
+
+    font-size: 1.1rem;
+}
+
+
+#contato input::placeholder,
+#contato textarea::placeholder {
+    color: #7665a6;
+}
+
+
+#contato button,
+.quiz-reiniciar {
+    font-family: 'Bebas Neue', sans-serif !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8a2be2,
+            #1f5eff
+        ) !important;
+
+    color: white !important;
+
+    border: none;
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    font-size: 1.6rem;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 4px 15px rgba(138, 43, 226, 0.2);
+}
+
+
+.quiz-reiniciar {
+    max-width: 250px;
+
+    margin: 15px auto 0 auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background:
+        rgba(255, 255, 255, 0.4) !important;
+
+    border-top:
+        1px solid rgba(138, 43, 226, 0.1) !important;
+
+    color: #4a3b75 !important;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    margin-top: 4rem;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-links a {
+        margin-left: 0.7rem;
+
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 4.5rem !important;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        min-height: 70px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+
+        padding:
+            10px 1rem;
+    }
+
+    .nav-links {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 8px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+
+        font-size: 0.95rem;
+    }
+
+    header {
+        margin-top: 120px !important;
+
+        padding:
+            3rem 1rem;
+    }
+
+    header h1 {
+        font-size: 3.5rem !important;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding:
+            2.5rem 1.2rem !important;
+
+        margin:
+            1rem !important;
+    }
+
+    h2 {
+        font-size: 2.8rem !important;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+
 }
