@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,14 @@
     <title>Agro Forte - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Menu de Navegação Superior Fixado -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">🌱 AgroForte</a>
+
             <div class="nav-links">
                 <a href="#producao">Produção</a>
                 <a href="#sustentabilidade">Sustentabilidade</a>
@@ -23,154 +25,348 @@
         </div>
     </nav>
 
+
+    <!-- Cabeçalho -->
     <header>
         <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>Equilíbrio entre produção de alto nível e preservação do meio ambiente.</p>
+        <p>
+            Equilíbrio entre produção de alto nível e preservação do meio ambiente.
+        </p>
     </header>
 
+
+    <!-- Hero -->
     <section class="hero">
         <h2>Bem-vindo à Agricultura Moderna</h2>
-        <p>Descubra como a tecnologia e o agronegócio inteligente podem crescer economicamente sem prejudicar os recursos naturais das futuras gerações.</p>
-        
-        <!-- Ilustração Tecnológica Nativa: Drone e Campo -->
-     <img src="https://picsum.photos" alt="Drone de alta tecnologia mapeando lavouras" style="width: 100%; max-width: 600px; height: auto; border-radius: 12px; margin-top: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: block; margin-left: auto; margin-right: auto;">
 
+        <p>
+            Descubra como a tecnologia e o agronegócio inteligente podem crescer
+            economicamente sem prejudicar os recursos naturais das futuras gerações.
+        </p>
+
+        <!-- Imagem principal -->
+        <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+            alt="Campo agrícola representando a agricultura moderna"
+            class="hero-image"
+        >
+
+        <!-- Ilustração tecnológica -->
+        <div class="hero-svg-container">
             <svg viewBox="0 0 800 400" width="100%" height="auto" style="border-radius: 8px;">
+
                 <defs>
                     <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                         <stop offset="0%" stop-color="#110a3a"/>
                         <stop offset="100%" stop-color="#1f1145"/>
                     </linearGradient>
+
                     <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stop-color="#4dadff"/>
                         <stop offset="100%" stop-color="#8a2be2"/>
                     </linearGradient>
                 </defs>
+
                 <rect width="800" height="400" fill="url(#skyGrad)"/>
-                <path d="M 400 200 L 0 400 M 400 200 L 150 400 M 400 200 L 300 400 M 400 200 L 450 400 M 400 200 L 600 400 M 400 200 L 800 400" stroke="rgba(77, 173, 255, 0.2)" stroke-width="2"/>
-                <path d="M 0 280 L 800 280 M 0 330 L 800 330" stroke="rgba(138, 43, 226, 0.2)" stroke-width="1.5"/>
+
+                <path
+                    d="M 400 200 L 0 400
+                       M 400 200 L 150 400
+                       M 400 200 L 300 400
+                       M 400 200 L 450 400
+                       M 400 200 L 600 400
+                       M 400 200 L 800 400"
+                    stroke="rgba(77, 173, 255, 0.2)"
+                    stroke-width="2"
+                />
+
+                <path
+                    d="M 0 280 L 800 280
+                       M 0 330 L 800 330"
+                    stroke="rgba(138, 43, 226, 0.2)"
+                    stroke-width="1.5"
+                />
+
                 <circle cx="100" cy="350" r="6" fill="#00ffcc" opacity="0.7"/>
                 <circle cx="250" cy="320" r="4" fill="#00ffcc" opacity="0.6"/>
                 <circle cx="550" cy="320" r="4" fill="#00ffcc" opacity="0.6"/>
                 <circle cx="700" cy="350" r="6" fill="#00ffcc" opacity="0.7"/>
-                <path d="M 350 120 L 450 120 L 470 140 L 330 140 Z" fill="url(#neonGrad)"/>
+
+                <!-- Drone -->
+                <path
+                    d="M 350 120 L 450 120 L 470 140 L 330 140 Z"
+                    fill="url(#neonGrad)"
+                />
+
                 <circle cx="400" cy="130" r="10" fill="#fff" opacity="0.9"/>
+
                 <line x1="310" y1="140" x2="350" y2="140" stroke="#fff" stroke-width="4"/>
                 <line x1="450" y1="140" x2="490" y2="140" stroke="#fff" stroke-width="4"/>
-                <ellipse cx="295" cy="140" rx="20" ry="4" fill="none" stroke="#4dadff" stroke-width="2" stroke-dasharray="4"/>
-                <ellipse cx="505" cy="140" rx="20" ry="4" fill="none" stroke="#4dadff" stroke-width="2" stroke-dasharray="4"/>
-                <polygon points="400,140 100,350 250,320" fill="rgba(77, 173, 255, 0.15)"/>
-                <polygon points="400,140 550,320 700,350" fill="rgba(138, 43, 226, 0.15)"/>
-                <text x="400" y="50" font-family="'Kanit', sans-serif" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold" letter-spacing="2">MONITORAMENTO POR DRONE</text>
+
+                <ellipse
+                    cx="295"
+                    cy="140"
+                    rx="20"
+                    ry="4"
+                    fill="none"
+                    stroke="#4dadff"
+                    stroke-width="2"
+                    stroke-dasharray="4"
+                />
+
+                <ellipse
+                    cx="505"
+                    cy="140"
+                    rx="20"
+                    ry="4"
+                    fill="none"
+                    stroke="#4dadff"
+                    stroke-width="2"
+                    stroke-dasharray="4"
+                />
+
+                <!-- Área de monitoramento -->
+                <polygon
+                    points="400,140 100,350 250,320"
+                    fill="rgba(77, 173, 255, 0.15)"
+                />
+
+                <polygon
+                    points="400,140 550,320 700,350"
+                    fill="rgba(138, 43, 226, 0.15)"
+                />
+
+                <text
+                    x="400"
+                    y="50"
+                    font-family="'Kanit', sans-serif"
+                    font-size="22"
+                    fill="#fff"
+                    text-anchor="middle"
+                    font-weight="bold"
+                    letter-spacing="2"
+                >
+                    MONITORAMENTO POR DRONE
+                </text>
+
             </svg>
         </div>
     </section>
 
+
+    <!-- Produção -->
     <section id="producao">
         <h2>O Agronegócio em Números</h2>
-        <p>O agronegócio é o motor da nossa economia, garantindo PIB elevado, novos empregos e exportações globais.</p>
+
+        <p>
+            O agronegócio é o motor da nossa economia, garantindo PIB elevado,
+            novos empregos e exportações globais.
+        </p>
+
         <ul>
-            <li><strong>Tecnologia Avançada:</strong> Uso prático de drones, sensores de solo e automação de maquinários.</li>
-            <li><strong>Relevância Comercial:</strong> Base vital e estratégica para manter a segurança alimentar global.</li>
+            <li>
+                <strong>Tecnologia Avançada:</strong>
+                Uso prático de drones, sensores de solo e automação de maquinários.
+            </li>
+
+            <li>
+                <strong>Relevância Comercial:</strong>
+                Base vital e estratégica para manter a segurança alimentar global.
+            </li>
         </ul>
     </section>
 
+
+    <!-- Sustentabilidade -->
     <section id="sustentabilidade">
+
         <h2>Práticas Sustentáveis no Campo</h2>
+
         <div class="grid">
-            <div class="grid-item">
-                <div style="background: rgba(46, 204, 113, 0.05); padding: 10px; border-radius: 8px; margin-bottom: 15px; border: 1px solid rgba(46, 204, 113, 0.2);">
-                    <img src="https://unsplash.com" alt="Plantio direto no solo" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
 
-                        <rect width="200" height="120" fill="#130f26" rx="6"/>
-                        <path d="M 10 90 Q 100 80 190 90" stroke="#795548" stroke-width="4" fill="none"/>
-                        <path d="M 100 85 Q 90 105 85 115 M 100 85 Q 110 100 115 110" stroke="#a1887f" stroke-width="2" fill="none"/>
-                        <path d="M 100 85 Q 105 50 95 30" stroke="#2ecc71" stroke-width="4" fill="none"/>
-                        <path d="M 95 30 Q 75 25 80 45 Q 95 40 95 30" fill="#2ecc71"/>
-                        <path d="M 98 45 Q 115 40 115 55 Q 100 55 98 45" fill="#2ecc71"/>
-                        <circle cx="95" cy="30" r="3" fill="#00ffcc"/>
-                    </svg>
+            <!-- Card 1 -->
+            <div class="grid-item">
+
+                <div class="image-container green">
+                    <img
+                        src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80"
+                        alt="Plantação agrícola e solo"
+                    >
                 </div>
+
                 <h3>Solo Vivo</h3>
-                <p>Uso prático do plantio direto e rotação estratégica de culturas.</p>
+
+                <p>
+                    Uso prático do plantio direto e rotação estratégica de culturas.
+                </p>
+
             </div>
-            
+
+
+            <!-- Card 2 -->
             <div class="grid-item">
-                <div style="background: rgba(77, 173, 255, 0.05); padding: 10px; border-radius: 8px; margin-bottom: 15px; border: 1px solid rgba(77, 173, 255, 0.2);">
-                    <svg viewBox="0 0 200 120" width="100%" height="120">
-                        <rect width="200" height="120" fill="#130f26" rx="6"/>
-                        <rect x="20" y="45" width="160" height="10" fill="#4dadff" rx="3" opacity="0.8"/>
-                        <circle cx="60" cy="50" r="4" fill="#fff"/>
-                        <circle cx="140" cy="50" r="4" fill="#fff"/>
-                        <path d="M 60 55 Q 45 80 40 95 M 60 55 Q 75 80 80 95" stroke="#00ffcc" stroke-width="2" stroke-dasharray="3" fill="none"/>
-                        <path d="M 140 55 Q 125 80 120 95 M 140 55 Q 155 80 160 95" stroke="#00ffcc" stroke-width="2" stroke-dasharray="3" fill="none"/>
-                        <rect x="15" y="95" width="170" height="8" fill="#3e2723" rx="2"/>
-                    </svg>
+
+                <div class="image-container blue">
+                    <img
+                        src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+                        alt="Agricultura e irrigação no campo"
+                    >
                 </div>
+
                 <h3>Água Inteligente</h3>
-                <p>Sistemas automatizados de irrigação com foco em economia de recursos.</p>
+
+                <p>
+                    Sistemas automatizados de irrigação com foco em economia de recursos.
+                </p>
+
             </div>
-            
+
+
+            <!-- Card 3 -->
             <div class="grid-item">
-                <div style="background: rgba(241, 196, 15, 0.05); padding: 10px; border-radius: 8px; margin-bottom: 15px; border: 1px solid rgba(241, 196, 15, 0.2);">
-                 <img src="https://picsum.photos" alt="Irrigação inteligente" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; display: block;">
 
-
-                        <rect width="200" height="120" fill="#130f26" rx="6"/>
-                        <circle cx="160" cy="30" r="14" fill="#f1c40f" opacity="0.3"/>
-                        <circle cx="160" cy="30" r="8" fill="#f1c40f"/>
-                        <polygon points="40,95 130,95 110,45 55,45" fill="#34495e" stroke="#4dadff" stroke-width="2"/>
-                        <line x1="85" y1="45" x2="85" y2="95" stroke="#4dadff" stroke-width="1.5"/>
-                        <line x1="55" y1="70" x2="118" y2="70" stroke="#4dadff" stroke-width="1.5"/>
-                        <line x1="145" y1="40" x2="110" y2="60" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4"/>
-                    </svg>
+                <div class="image-container yellow">
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
+                        alt="Painéis solares para geração de energia"
+                    >
                 </div>
-                            <img src="https://picsum.photos" alt="Painéis solares na agricultura" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; display: block;">
+
                 <h3>Energia Limpa</h3>
-                <p>Implementação em larga escala de painéis solares e bioenergia.</p>
+
+                <p>
+                    Implementação em larga escala de painéis solares e bioenergia.
+                </p>
+
             </div>
+
         </div>
+
     </section>
 
+
+    <!-- Desafios -->
     <section id="desafios">
+
         <h2>Desafios que Precisamos Enfrentar</h2>
-        <p>Precisamos combater de frente o desmatamento ilegal, o uso excessivo de recursos hídricos e as emissões de carbono para garantir um futuro viável.</p>
+
+        <p>
+            Precisamos combater de frente o desmatamento ilegal,
+            o uso excessivo de recursos hídricos e as emissões de carbono
+            para garantir um futuro viável.
+        </p>
+
     </section>
 
+
+    <!-- Soluções -->
     <section id="solucoes">
+
         <h2>Inovações para o Futuro</h2>
-        <p>Através da agricultura regenerativa e do monitoramento de precisão baseado em dados, transformamos impacto ambiental em resultados positivos.</p>
+
+        <p>
+            Através da agricultura regenerativa e do monitoramento de precisão
+            baseado em dados, transformamos impacto ambiental em resultados positivos.
+        </p>
+
     </section>
 
+
+    <!-- Quiz -->
     <section id="quiz">
+
         <h2>Teste Seus Conhecimentos</h2>
-        <p>Descubra se você conhece as principais tecnologias do campo sustentável respondendo ao nosso quiz rápido!</p>
+
+        <p>
+            Descubra se você conhece as principais tecnologias do campo sustentável
+            respondendo ao nosso quiz rápido!
+        </p>
+
         <div class="quiz-container">
+
             <div class="quiz-card" id="quiz-card">
-                <h3 id="quiz-pergunta">Carregando pergunta...</h3>
-                <div class="quiz-opcoes" id="quiz-opcoes"></div>
+
+                <h3 id="quiz-pergunta">
+                    Carregando pergunta...
+                </h3>
+
+                <div
+                    class="quiz-opcoes"
+                    id="quiz-opcoes">
+                </div>
+
             </div>
-            <div id="quiz-resultado" class="quiz-resultado hidden"></div>
+
+            <div
+                id="quiz-resultado"
+                class="quiz-resultado hidden">
+            </div>
+
         </div>
+
     </section>
 
+
+    <!-- Contato -->
     <section id="contato">
+
         <h2>Participe e Faça a Diferença</h2>
-        <p>Envie sua mensagem com sugestões, dúvidas ou propostas de parcerias para nossa equipe.</p>
-        <div id="form-feedback" class="form-feedback hidden"></div>
+
+        <p>
+            Envie sua mensagem com sugestões, dúvidas ou propostas
+            de parcerias para nossa equipe.
+        </p>
+
+        <div
+            id="form-feedback"
+            class="form-feedback hidden">
+        </div>
+
         <form id="formContato">
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu e-mail" required>
-            <textarea id="mensagem" placeholder="Sua sugerão ou dúvida" rows="5" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Seu e-mail"
+                required
+            >
+
+            <textarea
+                id="mensagem"
+                placeholder="Sua sugestão ou dúvida"
+                rows="5"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Enviar Mensagem
+            </button>
+
         </form>
+
     </section>
 
+
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 Agro Forte - Futuro Sustentável. Todos os direitos reservados.</p>
+
+        <p>
+            &copy; 2026 Agro Forte - Futuro Sustentável.
+            Todos os direitos reservados.
+        </p>
+
     </footer>
 
-    <!-- Chamamos o arquivo script.js externo de forma canônica -->
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
