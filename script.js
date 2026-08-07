@@ -1,10 +1,17 @@
+/* =========================================================
+   AGRO FORTE
+   JAVASCRIPT DO SITE
+========================================================= */
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* =========================================
-       QUIZ
-    ========================================= */
+
+    /* =====================================================
+       PERGUNTAS DO QUIZ
+    ====================================================== */
 
     const perguntasQuiz = [
+
         {
             pergunta:
                 "Qual dessas tecnologias é muito usada para mapear áreas de desmatamento e monitorar a saúde das plantas em tempo real?",
@@ -18,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             correta: 1
         },
+
 
         {
             pergunta:
@@ -33,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             correta: 1
         },
 
+
         {
             pergunta:
                 "Qual o principal benefício da Agricultura Regenerativa para o planeta?",
@@ -46,13 +55,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
             correta: 2
         }
+
     ];
 
+
+    /* =====================================================
+       VARIÁVEIS DO QUIZ
+    ====================================================== */
 
     let perguntaAtualIdx = 0;
 
     let pontuacaoFinal = 0;
 
+
+    /* =====================================================
+       ELEMENTOS DO HTML
+    ====================================================== */
 
     const elementoPergunta =
         document.getElementById('quiz-pergunta');
@@ -67,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('quiz-resultado');
 
 
-    /* =========================================
+    /* =====================================================
        RENDERIZAR QUIZ
-    ========================================= */
+    ====================================================== */
 
     function renderizarQuiz() {
 
@@ -124,20 +142,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                     elementoOpcoes.appendChild(btn);
+
                 }
             );
+
 
         } else {
 
             exibirResultadoFinalQuiz();
 
         }
+
     }
 
 
-    /* =========================================
+    /* =====================================================
        VERIFICAR RESPOSTA
-    ========================================= */
+    ====================================================== */
 
     function checarRespostaQuiz(
         idxSelecionado,
@@ -145,14 +166,17 @@ document.addEventListener('DOMContentLoaded', function () {
     ) {
 
         const botoes =
-            elementoOpcoes.querySelectorAll('.quiz-btn');
+            elementoOpcoes.querySelectorAll(
+                '.quiz-btn'
+            );
 
 
         botoes.forEach(
-            b => b.setAttribute(
-                'disabled',
-                'true'
-            )
+            b =>
+                b.setAttribute(
+                    'disabled',
+                    'true'
+                )
         );
 
 
@@ -173,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             pontuacaoFinal++;
 
+
         } else {
 
             botaoClicado.classList.add(
@@ -180,7 +205,9 @@ document.addEventListener('DOMContentLoaded', function () {
             );
 
 
-            if (botoes[respostaCorretaIdx]) {
+            if (
+                botoes[respostaCorretaIdx]
+            ) {
 
                 botoes[
                     respostaCorretaIdx
@@ -189,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 );
 
             }
+
         }
 
 
@@ -202,12 +230,13 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             1200
         );
+
     }
 
 
-    /* =========================================
+    /* =====================================================
        RESULTADO FINAL
-    ========================================= */
+    ====================================================== */
 
     function exibirResultadoFinalQuiz() {
 
@@ -220,7 +249,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 'hidden'
             );
 
-
             elementoResultadoQuiz.classList.remove(
                 'hidden'
             );
@@ -230,12 +258,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 "🌱 Bronze";
 
 
-            if (pontuacaoFinal === 3) {
+            if (
+                pontuacaoFinal === 3
+            ) {
 
                 medalha =
                     "🥇 Ouro Sustentável";
 
-            } else if (pontuacaoFinal === 2) {
+            } else if (
+                pontuacaoFinal === 2
+            ) {
 
                 medalha =
                     "🥈 Prata Tecnológica";
@@ -250,18 +282,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 </h4>
 
                 <p style="margin: 10px 0;">
+
                     Você acertou
+
                     <strong>
-                        ${pontuacaoFinal} de ${perguntasQuiz.length}
+                        ${pontuacaoFinal}
+                        de
+                        ${perguntasQuiz.length}
                     </strong>
+
                     questões.
+
                 </p>
 
                 <p>
+
                     Sua Classificação:
+
                     <strong>
                         ${medalha}
                     </strong>
+
                 </p>
 
                 <button
@@ -289,13 +330,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 );
 
             }
+
         }
+
     }
 
 
-    /* =========================================
+    /* =====================================================
        REINICIAR QUIZ
-    ========================================= */
+    ====================================================== */
 
     function reiniciarQuiz() {
 
@@ -320,19 +363,20 @@ document.addEventListener('DOMContentLoaded', function () {
             renderizarQuiz();
 
         }
+
     }
 
 
-    /* =========================================
-       INICIALIZAR QUIZ
-    ========================================= */
+    /* =====================================================
+       INICIAR QUIZ
+    ====================================================== */
 
     renderizarQuiz();
 
 
-    /* =========================================
+    /* =====================================================
        FORMULÁRIO DE CONTATO
-    ========================================= */
+    ====================================================== */
 
     const formContato =
         document.getElementById(
