@@ -1,162 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Agro Forte - Futuro Sustentável</title>
+
+    <!-- Arquivo de estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Menu de Navegação Superior Fixado -->
+    <!-- =====================================================
+         MENU DE NAVEGAÇÃO
+    ====================================================== -->
+
     <nav class="navbar">
+
         <div class="nav-container">
-            <a href="#" class="logo">🌱 AgroForte</a>
+
+            <a href="#" class="logo">
+                🌱 AgroForte
+            </a>
 
             <div class="nav-links">
+
                 <a href="#producao">Produção</a>
-                <a href="#sustentabilidade">Sustentabilidade</a>
-                <a href="#desafios">Desafios</a>
-                <a href="#solucoes">Inovações</a>
-                <a href="#quiz">Quiz</a>
-                <a href="#contato">Contato</a>
+
+                <a href="#sustentabilidade">
+                    Sustentabilidade
+                </a>
+
+                <a href="#desafios">
+                    Desafios
+                </a>
+
+                <a href="#solucoes">
+                    Inovações
+                </a>
+
+                <a href="#quiz">
+                    Quiz
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
             </div>
+
         </div>
+
     </nav>
 
 
-    <!-- Cabeçalho -->
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
     <header>
-        <h1>Agro Forte, Futuro Sustentável</h1>
+
+        <h1>
+            Agro Forte, Futuro Sustentável
+        </h1>
+
         <p>
             Equilíbrio entre produção de alto nível e preservação do meio ambiente.
         </p>
+
     </header>
 
 
-    <!-- Hero -->
+    <!-- =====================================================
+         AGRICULTURA MODERNA
+    ====================================================== -->
+
     <section class="hero">
-        <h2>Bem-vindo à Agricultura Moderna</h2>
+
+        <h2>
+            Bem-vindo à Agricultura Moderna
+        </h2>
 
         <p>
             Descubra como a tecnologia e o agronegócio inteligente podem crescer
             economicamente sem prejudicar os recursos naturais das futuras gerações.
         </p>
 
-        <!-- Imagem principal -->
-        <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
-            alt="Campo agrícola representando a agricultura moderna"
-            class="hero-image"
+
+        <!-- =================================================
+             VÍDEO REAL DE DRONE
+             
+             O vídeo deve estar em:
+             videos/drone-agricultura.mp4
+        ================================================== -->
+
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
         >
 
-        <!-- Ilustração tecnológica -->
-        <div class="hero-svg-container">
-            <svg viewBox="0 0 800 400" width="100%" height="auto" style="border-radius: 8px;">
+            <source
+                src="videos/drone-agricultura.mp4"
+                type="video/mp4"
+            >
 
-                <defs>
-                    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#110a3a"/>
-                        <stop offset="100%" stop-color="#1f1145"/>
-                    </linearGradient>
+            Seu navegador não suporta vídeos.
 
-                    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#4dadff"/>
-                        <stop offset="100%" stop-color="#8a2be2"/>
-                    </linearGradient>
-                </defs>
+        </video>
 
-                <rect width="800" height="400" fill="url(#skyGrad)"/>
-
-                <path
-                    d="M 400 200 L 0 400
-                       M 400 200 L 150 400
-                       M 400 200 L 300 400
-                       M 400 200 L 450 400
-                       M 400 200 L 600 400
-                       M 400 200 L 800 400"
-                    stroke="rgba(77, 173, 255, 0.2)"
-                    stroke-width="2"
-                />
-
-                <path
-                    d="M 0 280 L 800 280
-                       M 0 330 L 800 330"
-                    stroke="rgba(138, 43, 226, 0.2)"
-                    stroke-width="1.5"
-                />
-
-                <circle cx="100" cy="350" r="6" fill="#00ffcc" opacity="0.7"/>
-                <circle cx="250" cy="320" r="4" fill="#00ffcc" opacity="0.6"/>
-                <circle cx="550" cy="320" r="4" fill="#00ffcc" opacity="0.6"/>
-                <circle cx="700" cy="350" r="6" fill="#00ffcc" opacity="0.7"/>
-
-                <!-- Drone -->
-                <path
-                    d="M 350 120 L 450 120 L 470 140 L 330 140 Z"
-                    fill="url(#neonGrad)"
-                />
-
-                <circle cx="400" cy="130" r="10" fill="#fff" opacity="0.9"/>
-
-                <line x1="310" y1="140" x2="350" y2="140" stroke="#fff" stroke-width="4"/>
-                <line x1="450" y1="140" x2="490" y2="140" stroke="#fff" stroke-width="4"/>
-
-                <ellipse
-                    cx="295"
-                    cy="140"
-                    rx="20"
-                    ry="4"
-                    fill="none"
-                    stroke="#4dadff"
-                    stroke-width="2"
-                    stroke-dasharray="4"
-                />
-
-                <ellipse
-                    cx="505"
-                    cy="140"
-                    rx="20"
-                    ry="4"
-                    fill="none"
-                    stroke="#4dadff"
-                    stroke-width="2"
-                    stroke-dasharray="4"
-                />
-
-                <!-- Área de monitoramento -->
-                <polygon
-                    points="400,140 100,350 250,320"
-                    fill="rgba(77, 173, 255, 0.15)"
-                />
-
-                <polygon
-                    points="400,140 550,320 700,350"
-                    fill="rgba(138, 43, 226, 0.15)"
-                />
-
-                <text
-                    x="400"
-                    y="50"
-                    font-family="'Kanit', sans-serif"
-                    font-size="22"
-                    fill="#fff"
-                    text-anchor="middle"
-                    font-weight="bold"
-                    letter-spacing="2"
-                >
-                    MONITORAMENTO POR DRONE
-                </text>
-
-            </svg>
-        </div>
     </section>
 
 
-    <!-- Produção -->
+    <!-- =====================================================
+         PRODUÇÃO
+    ====================================================== -->
+
     <section id="producao">
-        <h2>O Agronegócio em Números</h2>
+
+        <h2>
+            O Agronegócio em Números
+        </h2>
 
         <p>
             O agronegócio é o motor da nossa economia, garantindo PIB elevado,
@@ -164,6 +133,7 @@
         </p>
 
         <ul>
+
             <li>
                 <strong>Tecnologia Avançada:</strong>
                 Uso prático de drones, sensores de solo e automação de maquinários.
@@ -173,28 +143,44 @@
                 <strong>Relevância Comercial:</strong>
                 Base vital e estratégica para manter a segurança alimentar global.
             </li>
+
         </ul>
+
     </section>
 
 
-    <!-- Sustentabilidade -->
+    <!-- =====================================================
+         SUSTENTABILIDADE
+    ====================================================== -->
+
     <section id="sustentabilidade">
 
-        <h2>Práticas Sustentáveis no Campo</h2>
+        <h2>
+            Práticas Sustentáveis no Campo
+        </h2>
+
 
         <div class="grid">
 
-            <!-- Card 1 -->
+
+            <!-- =================================================
+                 SOLO VIVO
+            ================================================== -->
+
             <div class="grid-item">
 
                 <div class="image-container green">
+
                     <img
                         src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80"
                         alt="Plantação agrícola e solo"
                     >
+
                 </div>
 
-                <h3>Solo Vivo</h3>
+                <h3>
+                    Solo Vivo
+                </h3>
 
                 <p>
                     Uso prático do plantio direto e rotação estratégica de culturas.
@@ -203,17 +189,25 @@
             </div>
 
 
-            <!-- Card 2 -->
+            <!-- =================================================
+                 ÁGUA INTELIGENTE
+            ================================================== -->
+
             <div class="grid-item">
 
                 <div class="image-container blue">
+
+                    <!-- Imagem alterada somente neste card -->
                     <img
-                        src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
-                        alt="Agricultura e irrigação no campo"
+                        src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?auto=format&fit=crop&w=800&q=80"
+                        alt="Sistema de irrigação agrícola"
                     >
+
                 </div>
 
-                <h3>Água Inteligente</h3>
+                <h3>
+                    Água Inteligente
+                </h3>
 
                 <p>
                     Sistemas automatizados de irrigação com foco em economia de recursos.
@@ -222,17 +216,24 @@
             </div>
 
 
-            <!-- Card 3 -->
+            <!-- =================================================
+                 ENERGIA LIMPA
+            ================================================== -->
+
             <div class="grid-item">
 
                 <div class="image-container yellow">
+
                     <img
                         src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
                         alt="Painéis solares para geração de energia"
                     >
+
                 </div>
 
-                <h3>Energia Limpa</h3>
+                <h3>
+                    Energia Limpa
+                </h3>
 
                 <p>
                     Implementação em larga escala de painéis solares e bioenergia.
@@ -245,10 +246,15 @@
     </section>
 
 
-    <!-- Desafios -->
+    <!-- =====================================================
+         DESAFIOS
+    ====================================================== -->
+
     <section id="desafios">
 
-        <h2>Desafios que Precisamos Enfrentar</h2>
+        <h2>
+            Desafios que Precisamos Enfrentar
+        </h2>
 
         <p>
             Precisamos combater de frente o desmatamento ilegal,
@@ -259,10 +265,15 @@
     </section>
 
 
-    <!-- Soluções -->
+    <!-- =====================================================
+         INOVAÇÕES
+    ====================================================== -->
+
     <section id="solucoes">
 
-        <h2>Inovações para o Futuro</h2>
+        <h2>
+            Inovações para o Futuro
+        </h2>
 
         <p>
             Através da agricultura regenerativa e do monitoramento de precisão
@@ -272,10 +283,15 @@
     </section>
 
 
-    <!-- Quiz -->
+    <!-- =====================================================
+         QUIZ
+    ====================================================== -->
+
     <section id="quiz">
 
-        <h2>Teste Seus Conhecimentos</h2>
+        <h2>
+            Teste Seus Conhecimentos
+        </h2>
 
         <p>
             Descubra se você conhece as principais tecnologias do campo sustentável
@@ -284,7 +300,10 @@
 
         <div class="quiz-container">
 
-            <div class="quiz-card" id="quiz-card">
+            <div
+                class="quiz-card"
+                id="quiz-card"
+            >
 
                 <h3 id="quiz-pergunta">
                     Carregando pergunta...
@@ -292,35 +311,42 @@
 
                 <div
                     class="quiz-opcoes"
-                    id="quiz-opcoes">
-                </div>
+                    id="quiz-opcoes"
+                ></div>
 
             </div>
+
 
             <div
                 id="quiz-resultado"
-                class="quiz-resultado hidden">
-            </div>
+                class="quiz-resultado hidden"
+            ></div>
 
         </div>
 
     </section>
 
 
-    <!-- Contato -->
+    <!-- =====================================================
+         CONTATO
+    ====================================================== -->
+
     <section id="contato">
 
-        <h2>Participe e Faça a Diferença</h2>
+        <h2>
+            Participe e Faça a Diferença
+        </h2>
 
         <p>
-            Envie sua mensagem com sugestões, dúvidas ou propostas
-            de parcerias para nossa equipe.
+            Envie sua mensagem com sugestões, dúvidas ou propostas de parcerias
+            para nossa equipe.
         </p>
 
         <div
             id="form-feedback"
-            class="form-feedback hidden">
-        </div>
+            class="form-feedback hidden"
+        ></div>
+
 
         <form id="formContato">
 
@@ -354,7 +380,10 @@
     </section>
 
 
-    <!-- Rodapé -->
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
     <footer>
 
         <p>
@@ -365,8 +394,9 @@
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- Arquivo JavaScript -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
