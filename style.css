@@ -829,4 +829,125 @@ footer {
 
         height: 150px;
     }
+   /* =========================================================
+PISCINA TÉRMICA
+========================================================= */
+
+#piscina {
+
+text-align: left;
+
+
+}
+
+.piscina-conteudo {
+
+display: grid;
+
+grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+
+gap: 20px;
+
+margin-top: 2rem;
+
+
+}
+
+.piscina-card {
+
+background:
+    rgba(255, 255, 255, 0.5);
+
+padding: 25px;
+
+border-radius: 12px;
+
+border:
+    1px solid rgba(255, 255, 255, 0.7);
+
+box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.02);
+
+
+}
+
+.piscina-card h3 {
+
+font-family:
+    'Bebas Neue',
+    sans-serif !important;
+
+font-size: 2.2rem;
+
+color: #1e1145 !important;
+
+margin-bottom: 0.7rem;
+
+letter-spacing: 1px;
+
+
+}
+
+.piscina-card p {
+
+color: #3b2870 !important;
+
+
+}
+
+.piscina-fluxo {
+
+margin-top: 2rem;
+
+padding: 25px;
+
+text-align: center;
+
+background:
+    rgba(255, 255, 255, 0.4);
+
+border:
+    1px solid rgba(138, 43, 226, 0.2);
+
+border-radius: 12px;
+
+
+}
+
+.piscina-fluxo h3 {
+
+font-family:
+    'Bebas Neue',
+    sans-serif !important;
+
+font-size: 2.2rem;
+
+color: #8a2be2 !important;
+
+margin-bottom: 0.5rem;
+
+
+}
+
+.piscina-fluxo p {
+
+color: #2e1a66;
+
+font-size: 1.2rem;
+
+
+}
+
+.piscina-final {
+
+margin-top: 2rem;
+
+color: #3b2870 !important;
+
+
+}
 }
